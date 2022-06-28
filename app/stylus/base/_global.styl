@@ -1,12 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap")
+@font-face
+  font-family "UA-brand-regular"
+  src url("../../fonts/UA-brand-regular.woff2") format("woff2"),
+      url("../../fonts/UA-brand-regular.woff") format("woff")
+  font-weight normal
+  font-style normal
+
+@font-face
+  font-family "UA-brand-bold"
+  src url("../../fonts/UA-brand-bold.woff2") format("woff2"),
+      url("../../fonts/UA-brand-bold.woff") format("woff")
+  font-weight normal
+  font-style normal
+
+@font-face
+  font-family "UA-brand-black"
+  src url("../../fonts/UA-brand-black.woff2") format("woff2"),
+      url("../../fonts/UA-brand-black.woff") format("woff")
+  font-weight normal
+  font-style normal
+
+$font = "UA-brand-regular", sans-serif
+$fontBold = "UA-brand-bold", sans-serif
+$fontBlack = "UA-brand-black", sans-serif
+
 @import "_vars"
 @import "../includes/header/index.styl"
 @import "../includes/footer/index.styl"
 @import "../includes/modules/button/index.styl"
 @import "../includes/modules/pictures/index.styl"
 @import "../includes/modules/modals/index.styl"
-
-$font = "Lato", sans-serif
 
 html
   height 100%
@@ -70,7 +92,7 @@ h1,
 h2,
 h3,
 h4
-  font-family $font
+  font-family $fontBold
   font-weight 500
   margin 0
   padding 0
@@ -127,6 +149,7 @@ button
       left 0
 
 .section-title
+  font-family $fontBold
   font-size 4rem
   line-height 4.8rem
   text-shadow 0px 2px 2px #0B8C72

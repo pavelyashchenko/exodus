@@ -1,104 +1,62 @@
-@media (max-width 850px)
-  .intro__top
-    align-items flex-start
+@media (max-width 1024px)
+  .intro__inner
+    padding-top 200px
 
-    &-right
-      .top
-        align-items flex-start
-        flex-direction column
+    .top
+      .field
+        max-width 350px
 
-        .field
-          max-width 100%
-          width 100%
+    .bottom
+      flex-direction column-reverse
 
-          .field__title
-            margin-bottom 5px
+      .invited
+        max-width 100%
+        margin-bottom 40px
+        max-height 200px
 
-          &--wallet
-            margin-right 0
-            margin-bottom 20px
+        &__item
+          max-width 33%
+          padding-right 35px
 
-          &__main
-            .field__inner
-              max-width 100%
-              width 100%
-
-              span
-                max-width 470px
-                width 100%
+          li
+            max-width 100%
 
 @media (max-width 768px)
   .intro__inner
-    padding-bottom 120px
+    padding-top 150px
 
-  .intro__top
-    &-right
-      .bottom
-        flex-direction column
+    .top
+      display flex
+      flex-direction column
 
-        .reward
-          margin-right 0
-          order 2
+      .field
+        max-width 100%
 
-        .invited
-          margin-bottom 20px
-
-          &__right
-            max-width 359px
-
-            li
-              max-width 310px
-
-  .intro__middle
-    flex-direction column
-    align-items center
-
-    .mint-title
-      text-align center
-
-    .mint-blocks
-      justify-content center
-
-    &-mint
-      margin-right 0
-
-      .mint-blocks
-        margin 0 0 50px 0
-        width 100%
-
-        .mint-block
-          width 43%
-
-    &-slider
-      max-width 100%
-
-      .swiper
-        overflow visible !important
-
-  .cabinet__blocks-wrapper-fill
-    clip-path polygon(50% 0px, 125px 40px, 125px 255px, 50% 294px, 0px 259px, 0px 36px)
+        &--wallet
+          margin-bottom 40px
 
 @media (max-width 650px)
   .intro__inner
-    padding-top 150px
+    .bottom
+      .invited__item
+        padding-right 10px
 
-  .intro__top
-    flex-direction column
-    align-items center
+      .purchase__top
+        .button
+          width 100%
+          margin-bottom 10px
 
-    &-left
-      display flex
-      align-items center
-      margin-right 0
-      margin-bottom 50px
+      .purchase__bottom
+        display flex
+        flex-direction column
 
-      .nft
-        margin-bottom 0
-        margin-right 30px
+        .number
+          margin-right 0
+          width 100%
+          margin-bottom 20px
 
-  .intro__middle
-    flex-direction column
-    align-items center
+        .button
+          width 100%
 
   .spreadsheet__inner
     padding 0
@@ -112,22 +70,3 @@
   .poweredby-text
     margin-right 0
     margin-bottom 10px
-
-@media (max-width 425px)
-  .intro__top
-    &-left
-      flex-direction column
-
-      .nft
-        margin-bottom 30px
-        margin-right 0
-
-      .qualification__info-first
-        width 100%
-        margin-bottom 20px
-
-      .qualification__info-second
-        justify-content center
-
-        .tooltip
-          right 0

@@ -1,10 +1,9 @@
 extends ../includes/page
 
-include ../includes/modules/cabinet/tooltip/index
-include ../includes/modules/cabinet/slider-blocks/index
+//- include ../includes/modules/cabinet/slider-blocks/index
 
 block head
-  - var title = "Aura Own Cabinet"
+  - var title = "Exodus Own Cabinet"
   - var headerButton = "cabinet"
 
 block styles
@@ -19,163 +18,74 @@ block scripts
 block main
   section.intro
     .intro__inner
-      .intro__top
-        .intro__top-left
-          .nft
-            h4.nft__title Your NFT
-            ul.nft__inner
-              li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 50
-              li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 100
-              li.nft__li(title="Lorem ipsum dolor sit amet.") AURA NFT Power 200
-            button(data-izimodal-open="#modal-nft").nft__all Watch all
+      .top
+        .field.field--wallet
+          h4.field__title My wallet:
+          button.field__main
+            .field__inner
+              span 0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w
+            .field__icon
+              img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
 
-          .qualification
-            h4.qualification__title Qualification
-            .qualification__info
-              .qualification__info-first
-                .first-title STATUS: 
-                .first-info YES
-              .qualification__info-second
-                button(data-izimodal-open="#modal-error").turbo Buy Turbo
-                +tooltip({
-                  info: "I - Qualification purchase: You don't need to attract new members to participate in passive income. After purchasing a qualification, you will automatically queue up for payment."
-                })
+        .field.field--invite
+          h4.field__title Link for invitation:
+          button.field__main
+            .field__inner
+              span  0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w 0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w
+            .field__icon
+              img(src="img/cabinet/copy-icon.svg", alt="copy icon")
 
-        .intro__top-right
-          .top
-            .field.field--wallet
-              h4.field__title My wallet:
-              button.field__main
-                .field__inner
-                  span 0x2598763 .. Dft157dfe589w
-                .field__icon
-                  img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
+      .bottom
+        .purchase
+          .purchase__inner
+            .purchase__top
+              +button(type="button").button--red-filled
+                | 0.0725 BNB
+              +button(type="button").button--red
+                | Withdraw
 
-            .field.field--invite
-              h4.field__title Link for invitation:
-              button.field__main
-                .field__inner
-                  span https://your-site.io/RefID
-                .field__icon
-                  img(src="img/cabinet/copy-icon.svg", alt="copy icon")
+            .purchase__bottom
+              .number
+                .number__top
+                  button.number__level.number__level--minus
+                  .number__value 3
+                  button.number__level.number__level--plus
 
-          .bottom
-            .reward
-              h4.reward__title Balance:
-                span.reward__reward(title="0.425 BNB") 0.425 BNB
-              h4.reward__title Reward:
-                span.reward__reward(title="0.625 BNB") 0.625 BNB
-              .reward__buttons
-                +button(href="#" data-izimodal-open="#modal-error")
-                  | Withdraw
-                +button(href="#spreadsheet")
-                  | View History
-            
-            .invited
-              .invited__left 
-                span 16
-                span Invited:
-              
-              ul.invited__right
-                li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm
-                li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
-                li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
-                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
-                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
-                li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
-                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
-                li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+                .number__progress
+                  span
 
-      .intro__middle
-        .intro__middle-mint
-          h4.mint-title Mint NFT
-            +tooltip({
-              info: "MINT block: Green - you have an NFT of that level. Orange - you don't own this NFT and it is available for minting. Black - not available for minting. To mint NFT, you need to select a price level and click on it."
-            })
+                .number__percent 66%
 
-          .mint-blocks
-            a.mint-block.mint-block--green(href="#")
-              span(title="0.125") 0.125
-              span BNB
-            a.mint-block.mint-block--green(href="#")
-              span(title="0.25") 0.25
-              span BNB
-            a.mint-block.mint-block--orange(href="#")
-              span(title="0.5") 0.5
-              span BNB
-            a.mint-block(href="#")
-              span(title="1") 1
-              span BNB
-            a.mint-block(href="#")
-              span(title="2") 2
-              span BNB
-            a.mint-block(href="#")
-              span(title="4") 4
-              span BNB
-            a.mint-block(href="#")
-              span(title="8") 8
-              span BNB
-            a.mint-block(href="#")
-              span(title="16") 16
-              span BNB
+              +button(type="button").button--blue-filled
+                | Mint
+        
+        .invited
+          ul.invited__item
+            li.invited__item--first 20%
+            li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+            li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
 
-        .intro__middle-slider
-           +cabinet-blocks({
-              list: [
-                {
-                  type: "button",
-                  summ: "0.125",
-                  currency: "BNB",
-                  percent: "100",
-                  button: "Mint",
-                  fill: "100",
-                  tooltip: "Minting of this level is available. To do it, you need to press the Mint button."
-                },
-                {
-                  type: "button",
-                  summ: "0.25",
-                  currency: "BNB",
-                  percent: "35",
-                  button: "On",
-                  fill: "35",
-                  tooltip: "Enable / disable auto-reinvestment. With auto-reinvestment enabled, after the payout, the wallet address is queued again (you will receive 200% of the level price, 100% will be credited as a reward and 100% to pay for a place in the queue). With auto-reinvestment turned off, you will receive 200% of the level price and drop out of the queue. To join the queue again, you need to click the Off button, and you will need to pay for a place in the queue"
-                },
-                {
-                  type: "button",
-                  summ: "0.5",
-                  currency: "BNB",
-                  percent: "0",
-                  button: "On",
-                  fill: "0",
-                  tooltip: "Enable / disable auto-reinvestment. With auto-reinvestment enabled, after the payout, the wallet address is queued again (you will receive 200% of the level price, 100% will be credited as a reward and 100% to pay for a place in the queue). With auto-reinvestment turned off, you will receive 200% of the level price and drop out of the queue. To join the queue again, you need to click the Off button, and you will need to pay for a place in the queue"
-                },
-                {
-                  type: "simple",
-                  summ: "1",
-                  currency: "BNB"
-                },
-                {
-                  type: "simple",
-                  summ: "2",
-                  currency: "BNB"
-                },
-                {
-                  type: "simple",
-                  summ: "4",
-                  currency: "BNB"
-                },
-                {
-                  type: "simple",
-                  summ: "8",
-                  currency: "BNB"
-                },
-                {
-                  type: "simple",
-                  summ: "16",
-                  currency: "BNB"
-                },
-              ]
-            })
+          ul.invited__item
+            li.invited__item--first 10%
+            li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+
+          ul.invited__item
+            li.invited__item--first 5%
+            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+            li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
 
   section.spreadsheet#spreadsheet
     .spreadsheet__inner
@@ -301,7 +211,7 @@ block main
               td 
                 span 06/17/1987
 
-      +button(type="button").table-show-more
+      +button(type="button").button--red.table-show-more
         | Learn more
 
   section.poweredby

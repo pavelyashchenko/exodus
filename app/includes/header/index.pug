@@ -16,17 +16,11 @@ mixin header()
           .header__button
             if headerButton === "landing"
               +button(type="button" data-izimodal-open="#modal-connect")
-                | Connect wallet
+                | Mint
 
             if headerButton === "cabinet"
               +button(href="index.html")
-                | Back to Lobby
-
-          .header__icons
-            span.header__icons-follow Follow Us:
-            each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/post.svg': 'Post'}
-              a.header__icons-item(href="#" target="_blank")
-                img(src=value, alt=key)
+                | Main Page
 
     .header__mobile
       .header__mobile-top
@@ -57,20 +51,15 @@ mixin header()
       .header__mobile-inner
         nav.header__menu
           ul.header__menu-ul
-            each key, value in {"About us": 'about', "Benefits": 'benefits', "Roadmap": 'roadmap', "FAQ": 'faq'}
+            each key, value in {"About us": 'about', "How it work": 'how-it-work', "Roadmap": 'roadmap', "Contacts": 'contacts'}
               li.header__menu-li
                 a.header__menu-link(href=`index.html#${key}` )= value
 
         .header__button
           if headerButton === "landing"
             +button(type="button" data-izimodal-open="#modal-connect")
-              | Connect wallet
+              | Mint
 
           if headerButton === "cabinet"
             +button(href="index.html")
-              | Back to Lobby
-
-        .header__icons
-          each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/post.svg': 'Post'}
-            a.header__icons-item(href="#" target="_blank")
-              img(src=value, alt=key)
+              | Main Page

@@ -1,332 +1,193 @@
 @import "base/_global"
-@import "../includes/modules/cabinet/slider-blocks/index.styl"
-@import "../includes/modules/cabinet/tooltip/index.styl"
 
+// @import "../includes/modules/cabinet/slider-blocks/index.styl"
 .intro
-  background radial-gradient(800px 570px at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
+  background radial-gradient(121.48% 131.8% at 84.71% -31.8%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
 
 .intro__inner
   max-width 1030px
   margin 0 auto
-  padding 170px 15px 50px
+  padding 250px 15px 0
 
-.intro__top
-  display flex
-  align-items center
-  justify-content space-between
-  margin-bottom 50px
+  .top
+    display flex
+    align-items center
+    justify-content space-between
+    margin-bottom 60px
 
-  &-left
-    margin-right 50px
-
-    .nft
-      background-color rgba(30, 30, 34, 0.4)
-      padding 20px 35px
-      clip-path polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
-      text-align center
-      margin-bottom 45px
+    .field
+      display block
+      max-width 450px
+      width 100%
+      padding-right 32px
 
       &__title
-        font-weight 700
+        font-family $fontBlack
         font-size 20px
         line-height 24px
-        text-shadow 0px 1px 4px #14CEAC
-        letter-spacing 0.035em
-        margin-bottom 25px
-
-      &__inner
-        width 165px
-        margin-bottom 35px
-        text-align left
-
-      &__li
-        font-weight 300
-        font-size 16px
-        line-height 19px
-        color rgba(255, 255, 255, 0.8)
-        white-space nowrap
-        overflow hidden
-        text-overflow ellipsis
-        max-width 165px
-
-        &:not(:last-child)
-          margin-bottom 12px
-
-      &__all
-        font-weight 500
-        font-size 16px
-        line-height 19px
-        background-color rgba(19, 220, 193, 0.2)
-        padding 10px 20px
-        clip-path polygon(10% 0, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0 80%, 0 20%)
-        transition background-color 0.1s
-
-        &:hover
-          background-color rgba(19, 220, 193, 0.4)
-
-    .qualification
-      width 120px
-      margin 0 auto
-
-      &__title
-        font-weight 400
-        font-size 18px
-        line-height 1.4
         margin-bottom 15px
+        margin-left 15px
 
-      &__info
-        max-width 180px
-
-        &-first
-          display flex
-          align-items center
-          justify-content space-between
-          margin-bottom 20px
-          width 100px
-
-          .first-title
-            font-weight 300
-            font-size 14px
-            line-height 17px
-            margin-right 10px
-
-          .first-info
-            font-weight 700
-            font-size 14px
-            line-height 17px
-            color #20EEBC
-
-        &-second
-          position relative
-          display flex
-          align-items center
-          justify-content space-between
-
-          .turbo
-            font-weight 700
-            font-size 14px
-            line-height 17px
-            color $white
-            background-color #F13131
-            border-radius 38px
-            padding 3px 10px
-            transition background-color 0.1s
-
-            &:hover
-              background-color #d62e2e
-
-  &-right
-    max-width 620px
-    width 100%
-
-    .top
-      display flex
-      align-items center
-      justify-content space-between
-      margin-bottom 65px
-
-      .field
-        &--wallet
-          margin-right 10px
-
-        &__title
-          font-weight 400
-          font-size 2rem
-          line-height 2.4rem
-          margin-bottom 15px
-
-        &__main
-          display flex
-          align-items center
-          width 100%
-          height 35px
-
-          &:active
-            .field__inner
-              background-color rgba(19, 220, 193, 0.3)
-
-          .field__inner
-            padding 10px 8px 6px 8px
-            background-color rgba(19, 220, 193, 0.2)
-            height 100%
-            width 227px
-
-            span
-              display block
-              font-weight 300
-              font-size 1.6rem
-              line-height 1.9rem
-              white-space nowrap
-              overflow hidden
-              text-overflow ellipsis
-              text-align left
-
-          .field__icon
-            padding 7px 6px 3px 6px
-            background-color #00A18C
-            height 100%
-
-    .bottom
-      display flex
-      align-items center
-      justify-content space-between
-
-      .reward
-        margin-right 30px
-
-        &__title
-          display flex
-          align-items center
-          font-weight 300
-          font-size 2.4rem
-          line-height 2.9rem
-          margin-bottom 17px
-          color rgba(255, 255, 255, 0.7)
-
-          &:first-child
-            margin-bottom 10px
-
-        &__reward
-          display block
-          font-weight 500
-          white-space nowrap
-          overflow hidden
-          text-overflow ellipsis
-          max-width 115px
-          margin-left 10px
-
-        &__buttons
-          max-width 176px
-          text-align center
-          margin 0 auto
-
-          .button
-            width 100%
-
-            &:first-child
-              margin-bottom 14px
-
-      .invited
+      &__main
         display flex
         align-items center
-        justify-content space-between
-        padding 2.6rem 1.9rem 3.2rem 2.4rem
-        background-color rgba(30, 30, 34, 0.4)
-        clip-path polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
-        max-width 310px
         width 100%
 
-        &__left
-          margin-right 25px
+        &:active
+          .field__inner
+            background-color rgba(19, 220, 193, 0.3)
+
+        .field__inner
+          padding 14px 24px 10px 15px
+          background-color rgba(19, 220, 193, 0.2)
+          height 100%
+          width 100%
+          border-top-left-radius 5px
+          border-bottom-left-radius 5px
 
           span
             display block
-
-            &:first-child
-              font-weight 700
-              font-size 5rem
-              line-height 6rem
-              letter-spacing 0.035em
-              color #20EEBC
-
-            &:nth-child(2)
-              font-weight 300
-              font-size 2rem
-              line-height 2.4rem
-
-        &__right
-          height auto
-          max-height 130px
-          overflow-y auto
-          padding-right 15px
-          max-width 178px
-          width 100%
-
-          li
-            display block
-            font-weight 700
             font-size 16px
             line-height 19px
-            margin-bottom 10px
             white-space nowrap
             overflow hidden
             text-overflow ellipsis
-            max-width 140px
+            text-align left
 
-            &:last-child
-              margin-bottom 0
+        .field__icon
+          display block
+          padding 9px 6px 8px 6px
+          height 43px
+          background-color $blue
+          border-top-right-radius 5px
+          border-bottom-right-radius 5px
 
-          &::-webkit-scrollbar
-            width 5px
+      &--invite
+        .field__icon
+          padding 12px 6px 8px 6px
 
-          &::-webkit-scrollbar-track
-            background-color #1a1c1f
-            border-radius 10px
+  .bottom
+    display flex
+    align-items center
+    justify-content space-between
+    margin-bottom 80px
 
-          &::-webkit-scrollbar-thumb
-            background-color #276259
-            border-radius 10px
+    .purchase
+      &__inner
+        .button
+          font-size 16px
+          line-height 20px
+          padding 10px 17px 10px 18px
+          min-width 170px
 
-.intro__middle
-  display flex
-  align-items center
-  justify-content space-between
-  margin-bottom 50px
+      &__top
+        margin-bottom 20px
 
-  &-mint
-    margin-right 30px
+        .button--red-filled
+          margin-right 24px
 
-    .mint-title
-      position relative
-      display inline-block
-      font-weight 700
-      font-size 2rem
-      line-height 2.4rem
-      letter-spacing 0.035em
-      margin-bottom 17px
-
-      .tooltip
-        right -25px
-
-    .mint-blocks
-      display flex
-      flex-wrap wrap
-      width 285px
-      margin -6.5px -9px
-
-      .mint-block
+      &__bottom
         display flex
         align-items center
-        justify-content space-between
-        width 120px
-        padding 6px 10px
-        background-color transparent
-        border 1px solid #F13131
-        margin 6.5px 9px
 
-        span
-          &:first-child
-            display block
-            font-weight 700
+        .number
+          min-width 170px
+          margin-right 24px
+
+          &__top
+            display flex
+            align-items center
+            justify-content space-between
+            margin-bottom 10px
+
+            .number__level
+              width 18px
+              height 18px
+              background-color $blue
+              border-radius 50%
+              transition transform 0.3s
+
+              &:active
+                transform scale(0.9)
+
+              &--minus
+                background-image url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8.5' fill='%230033B7' stroke='%230047FF'/%3E%3Cline x1='5' y1='9' x2='13' y2='9' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+
+              &--plus
+                background-image url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='8.5' fill='%230033B7' stroke='%230047FF'/%3E%3Cline x1='5' y1='9' x2='13' y2='9' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='9' y1='5' x2='9' y2='13' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+
+            .number__value
+              font-size 20px
+              line-height 25px
+              text-align center
+              font-family $fontBlack
+
+          &__progress
+            width 100%
+            height 3px
+            background-color #2F3576
+            border-radius 3px
+            margin-bottom 5px
+
+            span
+              display block
+              width 10%
+              height 100%
+              background-color #0442EA
+              border-radius 3px
+
+          &__percent
+            text-align center
             font-size 16px
-            line-height 19px
-            white-space nowrap
-            overflow hidden
-            text-overflow ellipsis
-            max-width 73px
+            line-height 20px
 
-          &:nth-child(2)
-            font-weight 300
-            font-size 12px
-            line-height 14px
+    .invited
+      display flex
+      justify-content space-between
+      max-width 520px
+      width 100%
+      max-height 130px
+      overflow-y auto
 
-        &--green
-          background-color #099986
-          border-color transparent
+      &::-webkit-scrollbar
+        width 5px
 
-        &--orange
-          background-color #8F7000
-          border-color transparent
+      &::-webkit-scrollbar-track
+        background-color #322C43
+        border-radius 5px
+
+      &::-webkit-scrollbar-thumb
+        background-color #0047FF
+        border-radius 10px
+
+      &__item
+        height auto
+        padding-right 15px
+        max-width 178px
+        width 100%
+
+        li
+          display block
+          font-size 16px
+          line-height 19px
+          margin-bottom 10px
+          white-space nowrap
+          overflow hidden
+          text-overflow ellipsis
+          max-width 140px
+
+          &:last-child
+            margin-bottom 0
+
+        .invited__item--first
+          font-family $fontBlack
+          text-align center
+          margin-bottom 17px
+          font-size 20px
+          line-height 25px
+
+        .invited__item--red
+          color $red
 
 .spreadsheet
   margin-bottom 100px
@@ -346,7 +207,6 @@
   width 100%
   border-collapse collapse
   text-align left
-  border 1px solid #00C8A0
 
   &::after
     position absolute
@@ -355,7 +215,7 @@
     bottom -20px
     width 101%
     height 200px
-    background linear-gradient(0deg, #1E1E22 17.26%, rgba(30, 30, 34, 0) 81.76%)
+    background linear-gradient(0deg, #1c1924 17.26%, rgba(30, 30, 34, 0) 81.76%)
 
   &.is-active
     &::after
