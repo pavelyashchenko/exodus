@@ -1,0 +1,455 @@
+@import "base/_global"
+@import "../includes/modules/cabinet/slider-blocks/index.styl"
+@import "../includes/modules/cabinet/tooltip/index.styl"
+
+.intro
+  background radial-gradient(800px 570px at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
+
+.intro__inner
+  max-width 1030px
+  margin 0 auto
+  padding 170px 15px 50px
+
+.intro__top
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 50px
+
+  &-left
+    margin-right 50px
+
+    .nft
+      background-color rgba(30, 30, 34, 0.4)
+      padding 20px 35px
+      clip-path polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
+      text-align center
+      margin-bottom 45px
+
+      &__title
+        font-weight 700
+        font-size 20px
+        line-height 24px
+        text-shadow 0px 1px 4px #14CEAC
+        letter-spacing 0.035em
+        margin-bottom 25px
+
+      &__inner
+        width 165px
+        margin-bottom 35px
+        text-align left
+
+      &__li
+        font-weight 300
+        font-size 16px
+        line-height 19px
+        color rgba(255, 255, 255, 0.8)
+        white-space nowrap
+        overflow hidden
+        text-overflow ellipsis
+        max-width 165px
+
+        &:not(:last-child)
+          margin-bottom 12px
+
+      &__all
+        font-weight 500
+        font-size 16px
+        line-height 19px
+        background-color rgba(19, 220, 193, 0.2)
+        padding 10px 20px
+        clip-path polygon(10% 0, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0 80%, 0 20%)
+        transition background-color 0.1s
+
+        &:hover
+          background-color rgba(19, 220, 193, 0.4)
+
+    .qualification
+      width 120px
+      margin 0 auto
+
+      &__title
+        font-weight 400
+        font-size 18px
+        line-height 1.4
+        margin-bottom 15px
+
+      &__info
+        max-width 180px
+
+        &-first
+          display flex
+          align-items center
+          justify-content space-between
+          margin-bottom 20px
+          width 100px
+
+          .first-title
+            font-weight 300
+            font-size 14px
+            line-height 17px
+            margin-right 10px
+
+          .first-info
+            font-weight 700
+            font-size 14px
+            line-height 17px
+            color #20EEBC
+
+        &-second
+          position relative
+          display flex
+          align-items center
+          justify-content space-between
+
+          .turbo
+            font-weight 700
+            font-size 14px
+            line-height 17px
+            color $white
+            background-color #F13131
+            border-radius 38px
+            padding 3px 10px
+            transition background-color 0.1s
+
+            &:hover
+              background-color #d62e2e
+
+  &-right
+    max-width 620px
+    width 100%
+
+    .top
+      display flex
+      align-items center
+      justify-content space-between
+      margin-bottom 65px
+
+      .field
+        &--wallet
+          margin-right 10px
+
+        &__title
+          font-weight 400
+          font-size 2rem
+          line-height 2.4rem
+          margin-bottom 15px
+
+        &__main
+          display flex
+          align-items center
+          width 100%
+          height 35px
+
+          &:active
+            .field__inner
+              background-color rgba(19, 220, 193, 0.3)
+
+          .field__inner
+            padding 10px 8px 6px 8px
+            background-color rgba(19, 220, 193, 0.2)
+            height 100%
+            width 227px
+
+            span
+              display block
+              font-weight 300
+              font-size 1.6rem
+              line-height 1.9rem
+              white-space nowrap
+              overflow hidden
+              text-overflow ellipsis
+              text-align left
+
+          .field__icon
+            padding 7px 6px 3px 6px
+            background-color #00A18C
+            height 100%
+
+    .bottom
+      display flex
+      align-items center
+      justify-content space-between
+
+      .reward
+        margin-right 30px
+
+        &__title
+          display flex
+          align-items center
+          font-weight 300
+          font-size 2.4rem
+          line-height 2.9rem
+          margin-bottom 17px
+          color rgba(255, 255, 255, 0.7)
+
+          &:first-child
+            margin-bottom 10px
+
+        &__reward
+          display block
+          font-weight 500
+          white-space nowrap
+          overflow hidden
+          text-overflow ellipsis
+          max-width 115px
+          margin-left 10px
+
+        &__buttons
+          max-width 176px
+          text-align center
+          margin 0 auto
+
+          .button
+            width 100%
+
+            &:first-child
+              margin-bottom 14px
+
+      .invited
+        display flex
+        align-items center
+        justify-content space-between
+        padding 2.6rem 1.9rem 3.2rem 2.4rem
+        background-color rgba(30, 30, 34, 0.4)
+        clip-path polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%)
+        max-width 310px
+        width 100%
+
+        &__left
+          margin-right 25px
+
+          span
+            display block
+
+            &:first-child
+              font-weight 700
+              font-size 5rem
+              line-height 6rem
+              letter-spacing 0.035em
+              color #20EEBC
+
+            &:nth-child(2)
+              font-weight 300
+              font-size 2rem
+              line-height 2.4rem
+
+        &__right
+          height auto
+          max-height 130px
+          overflow-y auto
+          padding-right 15px
+          max-width 178px
+          width 100%
+
+          li
+            display block
+            font-weight 700
+            font-size 16px
+            line-height 19px
+            margin-bottom 10px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+            max-width 140px
+
+            &:last-child
+              margin-bottom 0
+
+          &::-webkit-scrollbar
+            width 5px
+
+          &::-webkit-scrollbar-track
+            background-color #1a1c1f
+            border-radius 10px
+
+          &::-webkit-scrollbar-thumb
+            background-color #276259
+            border-radius 10px
+
+.intro__middle
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 50px
+
+  &-mint
+    margin-right 30px
+
+    .mint-title
+      position relative
+      display inline-block
+      font-weight 700
+      font-size 2rem
+      line-height 2.4rem
+      letter-spacing 0.035em
+      margin-bottom 17px
+
+      .tooltip
+        right -25px
+
+    .mint-blocks
+      display flex
+      flex-wrap wrap
+      width 285px
+      margin -6.5px -9px
+
+      .mint-block
+        display flex
+        align-items center
+        justify-content space-between
+        width 120px
+        padding 6px 10px
+        background-color transparent
+        border 1px solid #F13131
+        margin 6.5px 9px
+
+        span
+          &:first-child
+            display block
+            font-weight 700
+            font-size 16px
+            line-height 19px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+            max-width 73px
+
+          &:nth-child(2)
+            font-weight 300
+            font-size 12px
+            line-height 14px
+
+        &--green
+          background-color #099986
+          border-color transparent
+
+        &--orange
+          background-color #8F7000
+          border-color transparent
+
+.spreadsheet
+  margin-bottom 100px
+
+.spreadsheet__inner
+  max-width 1030px
+  margin 0 auto
+  padding 0 15px
+  text-align center
+
+.table__wrapper
+  padding-bottom 25px
+  margin-bottom 25px
+
+.table
+  position relative
+  width 100%
+  border-collapse collapse
+  text-align left
+  border 1px solid #00C8A0
+
+  &::after
+    position absolute
+    content ""
+    left -1px
+    bottom -20px
+    width 101%
+    height 200px
+    background linear-gradient(0deg, #1E1E22 17.26%, rgba(30, 30, 34, 0) 81.76%)
+
+  &.is-active
+    &::after
+      display none
+
+  .thead
+    font-weight 700
+    font-size 20px
+    line-height 24px
+    letter-spacing 0.035em
+    color $white
+
+  .tbody
+    font-weight 300
+    font-size 16px
+    line-height 19px
+    letter-spacing 0.035em
+
+  .thead__row
+    th
+      font-weight bold
+      padding 46px 20px 41px
+
+      &:first-child
+        width 111px
+
+      &:nth-child(2)
+        width 370px
+
+      &:nth-child(3)
+        width 158px
+
+      &:last-child
+        width 113px
+
+  .tbody__row
+    &:first-child
+      td
+        padding-top 0
+
+    td
+      position relative
+      padding 10px 20px
+
+      &::after
+        position absolute
+        left 0
+        bottom 0
+        content ""
+        width 100%
+        height 1px
+        background-color #4B4B4E
+
+      &:first-child
+        &::after
+          width 92%
+          right 0
+          left auto
+
+      &:last-child
+        &::after
+          width 90%
+
+      &:first-child
+        width 111px
+
+      &:nth-child(2)
+        width 370px
+
+      &:nth-child(3)
+        width 158px
+
+      &:last-child
+        width 113px
+
+    .amount--green
+      color #20EEBC
+
+    .amount--red
+      color #F13131
+
+    &:nth-child(n+11)
+      display none
+
+.poweredby
+  &-inner
+    display flex
+    align-items center
+    justify-content center
+
+  &-text
+    font-weight 300
+    font-size 20px
+    line-height 24px
+    margin-right 15px
+
+@import "media/_media-cabinet.styl"

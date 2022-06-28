@@ -1,0 +1,9 @@
+mixin tooltip(data)
+  -
+    const info = data.info || "";
+
+  .tooltip
+    .tooltip__inner
+      .tooltip__icon
+        img(src="img/cabinet/info.svg", alt="Info")
+      p.tooltiptext= info

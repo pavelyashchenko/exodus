@@ -1,0 +1,103 @@
+.accordion
+  text-align left
+  margin-bottom 4rem
+
+.accordion__title
+  font-size 16px
+  line-height 24px
+  letter-spacing 0.01em
+  color $white
+  opacity .7
+  display block
+  position relative
+  
+  &:hover
+    text-decoration none
+
+  .accordion__title-decoration
+    display none
+
+  &::after, &::before
+    content ""
+    display table
+    position absolute
+    top 50%
+    background-color #00C8A0
+    transition transform 0.17s ease-in-out
+    will-change transform
+
+  &::after
+    margin-top -8px
+    right -30px
+    width 2px
+    height 14px
+
+  &::before
+    margin-top -2px
+    right -36px
+    width 14px
+    height 2px
+
+  &[aria-selected="true"]
+    opacity 1
+
+    &::before
+      transform rotate(180deg)
+
+    &::after
+      transform rotate(90deg)
+
+.accordion__title h3
+  position relative
+  display block
+  font-weight 400
+  font-size 2rem
+  line-height 3rem
+
+.accordion__item
+  max-width 625px
+  margin 0 auto
+  padding 2rem 7rem 1.6rem 3.3rem
+  background-image none
+  transition margin 0.2s
+
+  &.is-active
+    background-image url("../img/nineth/tab-bg.svg")
+    background-repeat no-repeat
+    background-size contain
+    background-position top center
+    margin 2rem auto 1rem
+
+    &:last-child
+      margin-bottom 0
+
+.accordion-list
+  margin 10px 0 10px 15px
+
+.accordion__body
+  display none
+  font-weight 300
+  font-size 1.4rem
+  line-height 1.5
+  padding 12px 0 6px 0
+  max-width 600px
+  margin-right 20px
+
+  &:focus
+    outline 1px solid #fff
+
+  p:last-child
+    margin-bottom 0
+
+  ol
+    padding-left 15px
+    margin-top 12px
+    margin-bottom 12px
+
+@media(max-width: 768px)
+  .accordion__title
+    h3
+      font-size 16px
+
+  .accordion__body
+    font-size 12px

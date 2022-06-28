@@ -1,0 +1,21 @@
+.button
+  display inline-block
+  align-items center
+  font-weight 600
+  font-size 1.7rem
+  line-height 2rem
+  padding 1rem 2.5rem
+  background-color transparent
+  border 1px solid $green
+  border-radius 35px
+  transition all .1s
+  color $white
+
+  &:hover,
+  &:focus-visible
+    background-color $greenHover
+    border 1px solid transparent
+
+  &:active
+    transform scale(.97)
+    background-color $greenHover

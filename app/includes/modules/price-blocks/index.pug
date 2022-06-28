@@ -1,0 +1,36 @@
+mixin price-block(data)
+  -
+    const blocks = data.list || [];
+
+  .levels__blocks
+    .swiper#price-blocks
+      .swiper-wrapper
+        each block in blocks
+          .swiper-slide
+            .levels__blocks-wrapper.wow(class=`${block.animation}` data-wow-delay=".2s")
+              .levels__blocks-wrapper-inner
+                .levels__blocks-level
+                  span= block.level
+                  span level
+                p.levels__blocks-price= block.price
+                p.levels__blocks-text= block.text
+                +button(type="button" data-izimodal-open="#modal-connect")
+                  | Buy
+      .swiper-scrollbar
+
+  .levels__blocks-mobile
+    .swiper#mobile-price-blocks
+      .swiper-wrapper
+        each block in blocks
+          .swiper-slide
+            .levels__blocks-wrapper
+              .levels__blocks-wrapper-inner
+                .levels__blocks-level
+                  span= block.level
+                  span level
+                p.levels__blocks-price= block.price
+                p.levels__blocks-text= block.text
+                +button(type="button" data-izimodal-open="#modal-connect")
+                  | Buy
+      .swiper-button-next
+      .swiper-button-prev

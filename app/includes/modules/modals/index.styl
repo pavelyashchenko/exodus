@@ -1,0 +1,220 @@
+.iziModal
+  background radial-gradient(124.01% 123.76% at 34.77% 103.54%, #138973 0%, rgba(52, 210, 180, 0) 100%)
+  backdrop-filter blur(5px)
+  border-radius 0 !important
+  max-width 506px !important
+  min-height 440px !important
+  height 440px !important
+
+  &::before
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    content ""
+    width 552px
+    height 480px
+    background-image url("../img/modals/modal-lines.svg")
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+
+  .iziModal-wrap
+    display flex
+    flex-direction column
+    align-items center
+    justify-content space-between
+    height 100% !important
+
+    .iziModal-content
+      display flex
+      flex-direction column
+      align-items center
+      justify-content space-between
+      height 100%
+      padding 20px !important
+
+html.iziModal-isAttached,
+html.iziModal-isOverflow
+  overflow visible
+
+.modal
+  &-close
+    position absolute
+    top 20px
+    right 20px
+    display none
+
+    img
+      height 24px
+      width 24px
+
+.modal-connect
+  &-inner
+    text-align center
+
+  &-title
+    font-weight 400
+    font-size 30px
+    line-height 36px
+    margin-bottom 50px
+
+  &-button
+    display flex
+    align-items center
+    justify-content space-between
+    width 100%
+    margin 0 auto 6rem
+    padding 15px 55px 15px 19px
+    background-color rgba(19, 220, 193, 0.5)
+    clip-path polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%)
+    text-align left
+    transition background-color 0.3s, transform 0.3s
+
+    &:active
+      background-color rgba(19, 220, 193, 0.7)
+      transform scale(0.97)
+
+    .info
+      &__title
+        color $white
+        font-weight 400
+        font-size 30px
+        line-height 36px
+
+      &__message
+        font-weight 300
+        font-size 20px
+        line-height 24px
+        color #1D1E21
+        opacity 0.8
+
+  &-content
+    font-weight 300
+    font-size 20px
+    line-height 24px
+    color #1D1E21
+
+    a
+      color $white
+
+.modal-error
+  &-inner
+    text-align center
+
+  &-title
+    font-weight 400
+    font-size 30px
+    line-height 36px
+    margin-bottom 35px
+
+  &-message
+    font-weight 300
+    font-size 16px
+    line-height 19px
+    max-width 335px
+    margin-bottom 35px
+    text-align left
+
+  &-buttons
+    &-title
+      font-weight 400
+      font-size 20px
+      line-height 24px
+      margin-bottom 15px
+
+    &-inner
+      display flex
+      align-items center
+      justify-content center
+
+    &-agree
+      background-color #00E6AE
+
+      &:hover
+        background-color #02ce9b
+
+    &-cancel
+      background-color transparent
+      border-color #F13131
+      margin-left 18px
+
+      &:hover
+        background-color #F13131
+
+.modal-nft
+  &-title
+    font-weight 400
+    font-size 30px
+    line-height 36px
+    margin-bottom 20px
+    text-align center
+
+  &-ul
+    max-height 250px
+    height 100%
+    width 100%
+    overflow auto
+    margin-bottom 30px
+    padding-right 20px
+
+  &-li
+    font-weight 300
+    font-size 2.2rem
+    line-height 3rem
+    color rgba(255, 255, 255, 0.8)
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    max-width 235px
+
+    &:not(:last-child)
+      margin-bottom 15px
+
+      span
+        color $white
+        font-weight 500
+
+  &-questions
+    font-weight 300
+    font-size 20px
+    line-height 24px
+    color #1D1E21
+    text-align center
+
+    a
+      color $white
+
+@media (max-width 768px)
+  .button
+    font-size 16px
+    padding 10px 25px
+
+@media (max-width 650px)
+  .iziModal
+    max-width 100% !important
+    height 100% !important
+
+    &::before
+      display none
+
+    .iziModal-wrap
+      padding 0
+
+      .iziModal-content
+        justify-content center
+        max-width 360px
+
+  .modal
+    &-close
+      display block
+
+  .modal-connect
+    &-button
+      max-width 310px
+
+      .info__title
+        font-size 24px
+
+      .info__message
+        font-size 16px
