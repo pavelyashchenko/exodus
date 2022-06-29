@@ -1,23 +1,9 @@
 .iziModal
-  background radial-gradient(124.01% 123.76% at 34.77% 103.54%, #138973 0%, rgba(52, 210, 180, 0) 100%)
-  backdrop-filter blur(5px)
+  background radial-gradient(172.68% 115.9% at 34.57% 0%, rgba(0, 92, 176, 0.9) 0%, rgba(32, 42, 92, 0.9) 38.29%, rgba(27, 15, 50, 0.72) 71.55%, rgba(35, 23, 47, 0.27) 99.48%)
   border-radius 0 !important
-  max-width 506px !important
-  min-height 440px !important
-  height 440px !important
-
-  &::before
-    position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-    content ""
-    width 552px
-    height 480px
-    background-image url("../img/modals/modal-lines.svg")
-    background-repeat no-repeat
-    background-position center
-    background-size contain
+  max-width 649px !important
+  min-height 610px !important
+  height 610px !important
 
   .iziModal-wrap
     display flex
@@ -53,137 +39,55 @@ html.iziModal-isOverflow
   &-inner
     text-align center
 
-  &-title
-    font-weight 400
-    font-size 30px
-    line-height 36px
-    margin-bottom 50px
-
-  &-button
-    display flex
-    align-items center
-    justify-content space-between
-    width 100%
-    margin 0 auto 6rem
-    padding 15px 55px 15px 19px
-    background-color rgba(19, 220, 193, 0.5)
-    clip-path polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%)
-    text-align left
-    transition background-color 0.3s, transform 0.3s
-
-    &:active
-      background-color rgba(19, 220, 193, 0.7)
-      transform scale(0.97)
-
-    .info
-      &__title
-        color $white
-        font-weight 400
-        font-size 30px
-        line-height 36px
-
-      &__message
-        font-weight 300
-        font-size 20px
-        line-height 24px
-        color #1D1E21
-        opacity 0.8
-
-  &-content
-    font-weight 300
-    font-size 20px
-    line-height 24px
-    color #1D1E21
-
-    a
-      color $white
-
-.modal-error
+.modal-error-accept
   &-inner
     text-align center
 
   &-title
-    font-weight 400
     font-size 30px
     line-height 36px
-    margin-bottom 35px
+    margin-bottom 45px
 
   &-message
-    font-weight 300
     font-size 16px
-    line-height 19px
-    max-width 335px
+    line-height 20px
+    max-width 420px
     margin-bottom 35px
     text-align left
 
   &-buttons
     &-title
-      font-weight 400
       font-size 20px
-      line-height 24px
-      margin-bottom 15px
+      line-height 25px
+      margin-bottom 60px
 
     &-inner
       display flex
       align-items center
       justify-content center
 
-    &-agree
-      background-color #00E6AE
+      .button-filled
+        margin-right 15px
 
-      &:hover
-        background-color #02ce9b
+.modal-error
+  &-inner
+    text-align center
 
-    &-cancel
-      background-color transparent
-      border-color #F13131
-      margin-left 18px
-
-      &:hover
-        background-color #F13131
-
-.modal-nft
   &-title
-    font-weight 400
-    font-size 30px
-    line-height 36px
-    margin-bottom 20px
-    text-align center
-
-  &-ul
-    max-height 250px
-    height 100%
-    width 100%
-    overflow auto
+    font-size 60px
+    line-height 75px
     margin-bottom 30px
-    padding-right 20px
 
-  &-li
-    font-weight 300
-    font-size 2.2rem
-    line-height 3rem
-    color rgba(255, 255, 255, 0.8)
-    white-space nowrap
-    overflow hidden
-    text-overflow ellipsis
-    max-width 235px
+  &-message
+    font-size 16px
+    line-height 20px
+    margin-bottom 80px
+    text-align left
+    max-width 477px
 
-    &:not(:last-child)
-      margin-bottom 15px
-
-      span
-        color $white
-        font-weight 500
-
-  &-questions
-    font-weight 300
-    font-size 20px
-    line-height 24px
-    color #1D1E21
+.modal-processing
+  &-title
     text-align center
-
-    a
-      color $white
 
 @media (max-width 768px)
   .button
@@ -209,12 +113,7 @@ html.iziModal-isOverflow
     &-close
       display block
 
-  .modal-connect
-    &-button
-      max-width 310px
-
-      .info__title
-        font-size 24px
-
-      .info__message
-        font-size 16px
+  .modal-success,
+  .modal-processing
+    &-title
+      margin-bottom 150px

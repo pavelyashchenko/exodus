@@ -198,16 +198,6 @@ const showMoreTeam = () => {
 	});
 };
 
-// Loader init
-const loaderInit = () => {
-	$('.modal-connect-button').on('click', function(e){
-		e.preventDefault();
-
-		$(this).css('display', 'none');
-		$('.loader').addClass('is-active');
-	});
-};
-
 // First screen parallax
 const parallaxInit = () => {
 	var scene = $('#parallax').get(0);
@@ -252,5 +242,4 @@ const parallaxInit = () => {
 	showMoreFaq();
 	showMoreTeam();
 	parallaxInit();
-	loaderInit();
 })();

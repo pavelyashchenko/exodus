@@ -1,6 +1,5 @@
 @import "base/_global"
 
-// @import "../includes/modules/cabinet/slider-blocks/index.styl"
 .intro
   background radial-gradient(121.48% 131.8% at 84.71% -31.8%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
 
@@ -35,11 +34,11 @@
 
         &:active
           .field__inner
-            background-color rgba(19, 220, 193, 0.3)
+            background-color rgba(160, 160, 173, 0.3)
 
         .field__inner
           padding 14px 24px 10px 15px
-          background-color rgba(19, 220, 193, 0.2)
+          background-color rgba(160, 160, 173, 0.2)
           height 100%
           width 100%
           border-top-left-radius 5px
@@ -65,6 +64,21 @@
       &--invite
         .field__icon
           padding 12px 6px 8px 6px
+
+        .field__title
+          display flex
+          align-items flex-start
+          justify-content space-between
+
+          &-text
+            font-family $fontBlack
+            font-size 20px
+            line-height 25px
+
+            span
+              color $red
+              font-family $fontBlack
+              font-size 24px
 
   .bottom
     display flex
@@ -135,11 +149,6 @@
               height 100%
               background-color #0442EA
               border-radius 3px
-
-          &__percent
-            text-align center
-            font-size 16px
-            line-height 20px
 
     .invited
       display flex

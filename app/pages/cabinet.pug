@@ -1,7 +1,5 @@
 extends ../includes/page
 
-//- include ../includes/modules/cabinet/slider-blocks/index
-
 block head
   - var title = "Exodus Own Cabinet"
   - var headerButton = "cabinet"
@@ -20,7 +18,7 @@ block main
     .intro__inner
       .top
         .field.field--wallet
-          h4.field__title My wallet:
+          .field__title My wallet
           button.field__main
             .field__inner
               span 0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w
@@ -28,7 +26,10 @@ block main
               img(src="img/cabinet/wallet-icon.svg", alt="Wallet icon")
 
         .field.field--invite
-          h4.field__title Link for invitation:
+          .field__title
+            h4.field__title-text Your RefLink
+            h4.field__title-text Invited: 
+              span 85
           button.field__main
             .field__inner
               span  0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w 0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w0x2598763 .. Dft157dfe589w
@@ -41,7 +42,7 @@ block main
             .purchase__top
               +button(type="button").button--red-filled
                 | 0.0725 BNB
-              +button(type="button").button--red
+              +button(type="button" data-izimodal-open="#modal-processing").button--red
                 | Withdraw
 
             .purchase__bottom
@@ -53,8 +54,6 @@ block main
 
                 .number__progress
                   span
-
-                .number__percent 66%
 
               +button(type="button").button--blue-filled
                 | Mint
@@ -220,5 +219,8 @@ block main
       .poweredby-logo
         img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
 
+  +modal-connect()
+  +modal-error-accept()
   +modal-error()
-  +modal-nft()
+  +modal-success()
+  +modal-processing()
