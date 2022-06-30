@@ -23,6 +23,7 @@
     "jquery": "^3.6.0",
     "lottie-web": "^5.9.4",
     "normalize.css": "^8.0.1",
+    "overlayscrollbars": "^1.13.2",
     "swiper": "^8.1.5",
     "wow.js": "^1.2.2"
   },

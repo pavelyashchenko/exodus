@@ -24,4 +24,7 @@
     transitionIn: 'fadeInDown',
     bodyOverflow: true
   });
+  $('body, .scrollbar').overlayScrollbars({
+    className: "os-theme-light",
+  });
 })();
