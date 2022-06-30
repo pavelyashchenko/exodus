@@ -87,6 +87,9 @@
     margin-bottom 80px
 
     .purchase
+      max-width 450px
+      width 100%
+
       &__inner
         .button
           font-size 16px
@@ -95,24 +98,57 @@
           min-width 170px
 
       &__top
-        margin-bottom 20px
-
-        .button--red-filled
-          margin-right 24px
-
-      &__bottom
         display flex
         align-items center
+        justify-content space-between
+        margin-bottom 35px
+
+        &-inner
+          margin-right 20px
+
+        &-info
+          font-size 18px
+          line-height 22px
+          display flex
+          align-items center
+
+          &:first-child
+            margin-bottom 10px
+
+          span
+            display block
+            font-family $fontBold
+            font-size 22px
+            line-height 27px
+            color $white
+            margin-left 15px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+            max-width 150px
+
+            &:last-child
+              margin-left 5px
+              font-size 16px
+              line-height 1.3
+              align-self flex-end
+
+      &__middle
+        margin-bottom 35px
 
         .number
+          display flex
+          align-items center
+          justify-content space-between
           min-width 170px
-          margin-right 24px
 
-          &__top
+          &__buttons
             display flex
             align-items center
             justify-content space-between
             margin-bottom 10px
+            max-width 150px
+            width 100%
 
             .number__level
               width 25px
@@ -140,43 +176,99 @@
               font-family $fontBlack
 
           &__progress
+            position relative
             width 100%
             height 3px
             background-color #2F3576
             border-radius 3px
             margin-bottom 5px
+            max-width 170px
+            width 100%
+
+            &-percent
+              position absolute
+              top -25px
+              left 50%
+              transform translateX(-50%)
+              font-size 16px
+              line-height 20px
 
             span
               display block
-              width 10%
+              width 60%
               height 100%
               background-color #0442EA
               border-radius 3px
 
+      &__bottom
+        display flex
+        align-items center
+        justify-content space-between
+
+        &-info
+          font-size 18px
+          line-height 22px
+          display flex
+          align-items center
+
+          &:first-child
+            margin-bottom 10px
+
+          span
+            display block
+            font-family $fontBold
+            font-size 22px
+            line-height 27px
+            color $white
+            margin-left 15px
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+            max-width 150px
+
+            &:last-child
+              margin-left 5px
+              font-size 16px
+              line-height 1.3
+              align-self flex-end
+
     .invited
       display flex
       justify-content space-between
-      max-width 520px
+      max-width 460px
       width 100%
-      max-height 130px
-      overflow-y auto
-
-      &::-webkit-scrollbar
-        width 5px
-
-      &::-webkit-scrollbar-track
-        background-color #322C43
-        border-radius 5px
-
-      &::-webkit-scrollbar-thumb
-        background-color #0047FF
-        border-radius 10px
 
       &__item
+        &:last-child
+          .invited__list
+            margin-right 0
+
+      &__title
+        font-family $fontBlack
+        text-align center
+        margin-bottom 17px
+        font-size 20px
+        line-height 25px
+
+      &__list
         height auto
-        padding-right 15px
-        max-width 178px
+        margin-right 15px
+        padding-right 10px
+        max-width 130px
         width 100%
+        max-height 200px
+        overflow-y auto
+
+        &::-webkit-scrollbar
+          width 5px
+
+        &::-webkit-scrollbar-track
+          background-color #322C43
+          border-radius 5px
+
+        &::-webkit-scrollbar-thumb
+          background-color #0047FF
+          border-radius 10px
 
         li
           display block
@@ -190,13 +282,6 @@
 
           &:last-child
             margin-bottom 0
-
-        .invited__item--first
-          font-family $fontBlack
-          text-align center
-          margin-bottom 17px
-          font-size 20px
-          line-height 25px
 
         .invited__item--red
           color $red

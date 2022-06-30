@@ -40,51 +40,77 @@ block main
         .purchase
           .purchase__inner
             .purchase__top
-              +button(type="button").button--red-filled
-                | 0.0725 BNB
+              .purchase__top-inner
+                p.purchase__top-info Balance:
+                  span.purchase__top-num 10 
+                  span.purchase__top-cur BNB
+                p.purchase__top-info Reward:
+                  span.purchase__top-num 2 
+                  span.purchase__top-cur BNB
+
               +button(type="button" data-izimodal-open="#modal-processing").button--red
                 | Withdraw
 
-            .purchase__bottom
+            .purchase__middle
               .number
-                .number__top
+                .number__buttons
                   button.number__level.number__level--minus
                   .number__value 3
                   button.number__level.number__level--plus
 
                 .number__progress
+                  p.number__progress-percent 60%
                   span
 
-              +button(type="button").button--blue-filled
+            .purchase__bottom
+              .purchase__bottom-inner
+                p.purchase__bottom-info Price:
+                  span.purchase__bottom-num 0,1 
+                  span.purchase__bottom-cur BNB
+                p.purchase__bottom-info Total:
+                  span.purchase__bottom-num 0,3 
+                  span.purchase__bottom-cur BNB
+
+              +button(type="button" data-izimodal-open="#modal-error-accept").button--blue-filled
                 | Mint
         
         .invited
-          ul.invited__item
-            li.invited__item--first 20%
-            li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
-            li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
-            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
-            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+          .invited__item
+            .invited__title 20%
+            ul.invited__list
+              li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+              li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
 
-          ul.invited__item
-            li.invited__item--first 10%
-            li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
-            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
-            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
-            li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+          .invited__item
+            .invited__title 10%
+            ul.invited__list
+              li(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+              li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. 468f8gobo
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 468f7nldd
 
-          ul.invited__item
-            li.invited__item--first 5%
-            li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
-            li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+          .invited__item
+            .invited__title 5%
+            ul.invited__list
+              li.invited__item--red(title="0x0 .. yt9yebfvm") 0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm0x0 .. yt9yebfvm
+              li(title="0x0 .. yt9yebfvm") 0x0 .. fde4pgnw
+              li(title="0x0 .. yt9yebfvm") 0x0 .. 56427fjbf
 
   section.spreadsheet#spreadsheet
     .spreadsheet__inner

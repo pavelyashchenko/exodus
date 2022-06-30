@@ -12,11 +12,16 @@
       .invited
         max-width 100%
         margin-bottom 40px
-        max-height 200px
 
         &__item
           max-width 33%
-          padding-right 35px
+          width 100%
+          padding-right 5px
+          margin-right 10px
+
+        &__list
+          max-width 100%
+          padding-right 0
 
           li
             max-width 100%
@@ -42,23 +47,41 @@
         padding-right 10px
 
       .purchase__top
+        &-inner
+          margin-right 0
+          margin-bottom 10px
+
         .button
           width 100%
           margin-bottom 10px
 
-      .purchase__bottom
-        display flex
-        flex-direction column
-
+      .purchase__middle 
         .number
           margin-right 0
           width 100%
           margin-bottom 20px
 
-          &__top
+          &__buttons
+            max-width 100%
+            margin-bottom 50px
+
             .number__level
               width 35px
               height 35px
+
+          &__progress
+            max-width 100%
+            margin-bottom 0
+
+      .purchase__bottom
+        &-inner
+          margin-bottom 10px
+
+      .purchase__top,
+      .number,
+      .purchase__bottom
+        display flex
+        flex-direction column
 
         .button
           width 100%
