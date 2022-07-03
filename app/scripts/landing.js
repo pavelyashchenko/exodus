@@ -84,88 +84,21 @@ const Accordion = () => {
 };
 
 // Lottie anim
-const grayArow = () => {
+const sectionAnimations = () => {
 	bodymovin.loadAnimation({
-		container: document.querySelector('#gray-arrow'),
+		container: document.querySelector('#doorsAnimation'),
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
-		path: 'scripts/animations/gray-line.json',
+		path: 'scripts/animations/about-anim.json',
 	});
 
 	bodymovin.loadAnimation({
-		container: document.querySelector('#percent1'),
+		container: document.querySelector('#cardsAnimation'),
 		renderer: 'svg',
 		loop: true,
 		autoplay: true,
-		path: 'scripts/animations/100_2_gray_line.json',
-	});
-};
-
-const greenArrow = () => {
-	bodymovin.loadAnimation({
-		container: document.querySelector('#green-arrow'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'scripts/animations/green-line.json',
-	});
-
-	bodymovin.loadAnimation({
-		container: document.querySelector('#percent2'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'scripts/animations/100_1_green_line.json',
-	});
-};
-
-const yellowArrowFirst = () => {
-	bodymovin.loadAnimation({
-		container: document.querySelector('#yellow-arrow1'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'scripts/animations/yellow-line1.json',
-	});
-
-	bodymovin.loadAnimation({
-		container: document.querySelector('#percent3'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'scripts/animations/200_1_yellow_line.json',
-	});
-};
-
-const yellowArrowSecond = () => {
-	bodymovin.loadAnimation({
-		container: document.querySelector('#yellow-arrow2'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'scripts/animations/yellow-line2.json',
-	});
-
-	bodymovin.loadAnimation({
-		container: document.querySelector('#percent4'),
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'scripts/animations/200_2_yellow_line.json',
-	});
-};
-
-// Modal FAQ Link
-const modalFaqLink = () => {
-	$('#modal-link-faq').on('click', function (e) {
-		e.preventDefault();
-
-		$('html, body').animate({
-			scrollTop: $('#faq').offset().top,
-		});
-
-		$('.modal').iziModal('close');
+		path: 'scripts/animations/cards-anim.json',
 	});
 };
 
@@ -198,48 +131,42 @@ const showMoreTeam = () => {
 	});
 };
 
-// First screen parallax
-const parallaxInit = () => {
-	var scene = $('#parallax').get(0);
-	var parallaxInstance = new Parallax(scene);
+// numbers counter on scroll
+const numbersCounter = () => {
+	var section = document.querySelector('.numbers');
+	var hasEntered = false;
+
+	window.addEventListener('scroll', e => {
+		var shouldAnimate = window.scrollY + window.innerHeight >= section.offsetTop;
+
+		if (shouldAnimate && !hasEntered) {
+			hasEntered = true;
+
+			$('.numbers__item-nums').each(function () {
+				$(this)
+					.prop('Counter', 0)
+					.animate(
+						{
+							Counter: $(this).text(),
+						},
+						{
+							duration: 4000,
+							easing: 'swing',
+							step: function (now) {
+								$(this).text(Math.ceil(now));
+							},
+						}
+					);
+			});
+		}
+	});
 };
 
 (function () {
-	// SLiders
-	var swiper = new Swiper('#price-blocks', {
-		direction: 'horizontal',
-		slidesPerView: 'auto',
-		grabCursor: true,
-		spaceBetween: 30,
-		freeMode: true,
-		watchSlidesProgress: true,
-		mousewheel: false,
-		scrollbar: {
-			el: '.swiper-scrollbar',
-			hide: false,
-			draggable: true,
-		},
-	});
-
-	var swiper2 = new Swiper('#mobile-price-blocks', {
-		slidesPerView: 'auto',
-		spaceBetween: 15,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		}, 
-	});
-
 	// Functions init
 	Accordion();
-	setTimeout(function () {
-		grayArow();
-		greenArrow();
-		yellowArrowFirst();
-		yellowArrowSecond();
-	}, 1700);
-	modalFaqLink();
+	sectionAnimations();
 	showMoreFaq();
 	showMoreTeam();
-	parallaxInit();
+	numbersCounter();
 })();

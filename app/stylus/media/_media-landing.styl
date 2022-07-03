@@ -1,383 +1,52 @@
-@media (max-width 1024px)
-  .intro__inner
-    padding-top 20rem
-    padding-bottom 20rem
-
-  .intro__info
-    padding-top 100px
-
-  .intro__illustration
-    width 350px
-    height 220px
-
-    &-lines,
-    &-smokebot,
-    &-main,
-    &-smoketop
-      width 300px
-      height 300px
-
-    &-lines
-      height 155%
-
-  .how-it-works__main
-    max-width 710px
-    margin 100px auto 100px
-
-    .how-it-works__arrows
-      #gray-arrow
-        top -38px
-        left 50px
-        width 260px
-        height 80px
-
-        #percent1
-          max-width 20%
-          top 5px
-
-      #green-arrow
-        top -20px
-        left 210px
-        width 265px
-        height 70px
-
-        #percent2
-          max-width 20%
-
-      #yellow-arrow1
-        bottom 4px
-        left 187px
-        width 205px
-        height 30px
-
-        #percent3
-          max-width 25%
-
-      #yellow-arrow2
-        bottom -15px
-        right 58px
-        width 330px
-        height 60px
-
-        #percent4
-          max-width 16%
-          bottom -20px
-
-    .number__bank
-      width 100px
-      height 140px
-
-    .number__single
-      width 57px
-      height 66px
-
-      &::before
-        max-width 68px
-        height 68px
-
-    .number__double
-      max-width 155px
-
-      .number__single
-        width 57px
-        height 66px
-
-  .levels
-    &::before,
-    &::after
-      width 90px
-
-  .about
-    padding-top 60%
-    padding-bottom 25rem
-
-  .about__info
-    margin 0 auto
-
-  .about__img
-    opacity .4
-
-  .roadmap
-    padding-top 15rem
+// @media (max-width 1024px)
 
 @media (max-width 768px)
-  .intro
-    margin-bottom 0
-    background radial-gradient(400px 350px at 51.32% 38.71%, #177966 0%, rgba(14, 55, 47, 0.6) 51.56%, rgba(11, 39, 34, 0) 100%)
-
   .intro__inner
-    padding-bottom 42rem
+    flex-direction column
+    padding-top 15rem
 
-    &::after
-      bottom 20px
-
-  .intro__info
-    padding-top 50px
+    picture,
+    img
+      width 75%
+      text-align center
 
   .intro__illustration
-    width 250px
-    height 150px
+    width 100%
+    margin-right 0
+    text-align center
 
-    &-lines,
-    &-smokebot,
-    &-main,
-    &-smoketop
-      width 200px
-      height 200px
-
-    &-lines
-      height 155%
-
-  .results
-    margin-bottom 0
-
-  .results__inner
-    background-size contain
-
-  .pass
-    margin-bottom 50px
-    margin-top 50px
-
-  .pass__message
-    font-size 14px
-    line-height 1.3
-
-  .how-it-works__main
-    position relative
-    flex-direction column
-    max-width 320px
-    margin 0 auto
-
-    .how-it-works__arrows
-      #gray-arrow
-        top 200px
-        left 22%
-        width 380px
-        height 120px
-        transform rotate(90deg)
-
-        #percent1
-          position relative
-          top -10px
-          transform rotate(-90deg)
-
-      #green-arrow
-        top 415px
-        left 10%
-        width 425px
-        height 110px
-        transform rotate(90deg)
-
-        #percent2
-          position relative
-          top -10px
-          transform rotate(-90deg)
-
-      #yellow-arrow1
-        top 355px
-        right 35%
-        left auto
-        width 235px
-        height 60px
-        transform rotate(90deg)
-
-        #percent3
-          position absolute
-          bottom -45px
-          transform rotate(-90deg)
-          max-width 35%
-
-      #yellow-arrow2
-        bottom 337px
-        right -5%
-        width 520px
-        height 80px
-        transform rotate(90deg)
-
-        #percent4
-          position absolute
-          bottom -50px
-          transform rotate(-90deg)
-
-    .number__bank
-      width 150px
-      height 190px
-      transform rotate(32deg)
-      margin-bottom 30px
-
-      span
-        transform rotate(-32deg)
-        font-size 4rem
-
-    .number__single
-      margin-bottom 35px
-      width 77px
-      height 86px
-      margin-bottom 65px
-
-      &::before
-        max-width 89px
-        height 98px
-
-      span
-        font-size 4rem
-
-        &::before
-          transform rotate(90deg)
-          top -24px
-          left 30px
-
-        &::after
-          transform rotate(90deg)
-          bottom -27px
-          left 30px
-          top auto
-          right auto
-
-    .number__double
-      flex-direction column
-
-      &::before
-        background-image url("../img/fourth/double-green-mobile.svg")
-        height 209px
-        top 0
-        left 40px
-
-      &::after
-        background-image url("../img/fourth/double-lines-mobile.svg")
-        height 212px
-        top 0
-        left 40px
-
-      .number__single
-        width 77px
-        height 86px
-
-        &:not(:last-child)
-          margin-bottom 35px
-
-  .how-it-works__message
-    font-size 14px
-    line-height 1.4
-    margin 0 auto
-
-  .levels
-    &::before,
-    &::after
-      content none
+  .intro__info
+    text-align center
+    width 100%
+    max-width 100%
 
 @media (max-width 650px)
-  .intro
-    margin-bottom 40px
-
-  .intro__inner
-    flex-direction column
-    padding-bottom 27rem
-
-    &::after
-      bottom 20px
-
-  .intro__info
-    width 100%
-    order 2
-    padding-top 0
-
   .intro__illustration
-    width 150px
-    height 150px
-    order 1
-    margin-bottom 80px
+    &-circle
+      &--top
+        max-width 240px
+        max-height 240px
 
-    &::after
-      content none
+      &--bottom
+        max-width 150px
+        max-height 150px
 
-    &-lines,
-    &-smokebot,
-    &-main,
-    &-smoketop
-      width 200px
-      height 200px
-
-    &-lines
-      height 155%
-
-  .results
-    margin-bottom 40px
-
-  .results__inner
-    background-image url("../img/second/polygon-center-mobile.svg")
-    padding 30px 27px 17px
-
-  .results__container
-    max-width 256px
-    margin 0 auto
-    background-image url("../img/second/results-container.svg")
-    background-position center
-    background-size contain
-    background-repeat no-repeat
-    padding 0 39px 31px 39px
-    clip-path none
-
-  .results__wrapper
-    flex-direction column
-
-  .results__block
-    &:not(:first-child)
-      margin-left 0
-      margin-top 30px
-
-  .pass__inner
-    flex-direction column
-
-  .pass__info
-    margin-left 0
-    width 100%
-
-  .pass__img
-    width 100%
-
-    picture
-      width 100%
-
-  .how-it-works__main
-    transform none
-
-  .benefits__blocks
-    &-wrapper
-      margin-bottom 0
-
-      &:not(:first-child)
-        margin-bottom 0
-
-      &:last-child
-        margin-bottom 50px
+  .intro__social
+    display none
 
 @media (max-width 425px)
+  .intro__inner
+    picture,
+    img
+      width 80%
+
   .intro__illustration
-    width 170px
+    &-circle
+      &--top
+        max-width 170px
+        max-height 170px
 
-  .how-it-works__main
-    max-width 220px
-
-    .how-it-works__arrows
-      #gray-arrow
-        left 22px
-
-        #percent1
-          top 60px
-
-      #green-arrow
-        left -8%
-        top 420px
-
-        #percent2
-          top -5px
-
-      #yellow-arrow1
-        right 28%
-
-      #yellow-arrow2
-        right -30%
-
-        #percent4
-          top -54px
+      &--bottom
+        max-width 100px
+        max-height 100px
+  
