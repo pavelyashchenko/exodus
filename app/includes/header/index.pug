@@ -8,7 +8,7 @@ mixin header()
 
           nav.header__menu
             ul.header__menu-ul
-              each key, value in {"About us": 'about', "How it work": 'how-it-work', "Roadmap": 'roadmap', "Contacts": 'contacts'}
+              each key, value in {"About us": 'about', "How it works": 'how-it-works', "Roadmap": 'roadmap', "Contacts": 'contacts'}
                 li.header__menu-li
                   a.header__menu-link.link-underline(href=`index.html#${key}` )= value
 

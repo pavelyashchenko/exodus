@@ -1,4 +1,83 @@
-// @media (max-width 1024px)
+@media (max-width 1024px)
+  .roadmap
+    margin-bottom 0
+
+    &__message
+      margin-bottom 100px
+
+    #roadmapSlider
+      .swiper-wrapper
+        .swiper-slide
+          #linesAnimation
+            width 1100px
+
+  .roadmap__item
+    &-main
+      max-width 140px
+
+      p
+        font-size 14px
+        line-height 18px
+
+      ul
+        li
+          font-size 12px
+          line-height 16px
+
+    &-number
+      width 35px
+      height 35px
+
+      span
+        font-size 24px
+        line-height 32px
+
+    &-time
+      time
+        font-size 14px
+        line-height 18px
+
+    &--first
+      width 200px
+      height 200px
+      top -40px
+
+    &--second
+      width 210px
+      height 210px
+      top 140px
+      left 20px
+
+      .roadmap__item-info
+        top -95px
+
+    &--third
+      width 230px
+      height 230px
+      top -80px
+
+    &--fourth
+      width 200px
+      height 200px
+      top -185px
+      left 60px
+
+    &--fifth
+      width 300px
+      height 300px
+      top -30px
+
+      .roadmap__item-main
+        max-width 160px
+
+    &--sixth
+      width 320px
+      height 320px
+      top -315px
+      left 30px
+
+      .roadmap__item-main
+        max-width 160px
 
 @media (max-width 768px)
   .intro__inner
@@ -19,6 +98,105 @@
     text-align center
     width 100%
     max-width 100%
+
+  #roadmapSlider
+    display none
+
+  .roadmap__mobile
+    display block
+
+  .roadmap__items
+    position relative
+    flex-direction column
+    
+    &:first-child
+      margin-bottom 0
+
+    &::before
+      position absolute
+      content ""
+      top -190px
+      margin 0 auto
+      height 100%
+      width 430px
+      background-image url("../img/roadmap/roadmap-line.svg")
+      background-repeat no-repeat
+      background-position center
+      background-size contain
+      z-index -1
+
+  .roadmap__item
+    &-main
+      p
+        font-size 16px
+        line-height 20px
+
+      ul
+        li
+          font-size 16px
+          line-height 20px
+
+    &--first
+      width 243px
+      height 243px
+      top 0
+      margin-bottom 197px
+
+    &--second
+      width 272px
+      height 272px
+      top -40px
+      left 0
+      margin-bottom 130px
+
+      .roadmap__item-info
+        top -95px
+
+    &--third
+      width 277px
+      height 277px
+      top -80px
+      left 20px
+      margin-bottom 157px
+
+      .roadmap__item-info
+        top -75px
+        right 60px
+
+    &--fourth
+      width 270px
+      height 270px
+      top -140px
+      left -10px
+      margin-bottom 182px
+
+      .roadmap__item-info
+        top -75px
+        left 60px
+        right auto
+
+        .roadmap__item-number
+          margin-top 0
+          margin-bottom 10px
+
+    &--fifth
+      width 358px
+      height 358px
+      top -210px
+      left 70px
+      margin-bottom 150px
+
+      .roadmap__item-main
+        max-width 250px
+
+    &--sixth
+      width 376px
+      height 375px
+      top -280px
+      left -20px
+
+      .roadmap__item-main
+        max-width 250px
 
 @media (max-width 650px)
   .intro__illustration
@@ -49,4 +227,3 @@
       &--bottom
         max-width 100px
         max-height 100px
-  

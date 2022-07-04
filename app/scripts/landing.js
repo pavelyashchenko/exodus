@@ -110,7 +110,20 @@ const sectionAnimations = () => {
 	});
 };
 
-// FAQ Show more button
+// Show more buttons
+const showMoreHowItWorks = () => {
+	$('.how-it-works__button-learn-more').on('click', function () {
+		$('.how-it-works__scheme').slideToggle(300);
+
+		$(this).toggleClass('is-active');
+		if ($(this).hasClass('is-active')) {
+			$(this).text('Show less');
+		} else {
+			$(this).text('Learn more');
+		}
+	});
+};
+
 const showMoreFaq = () => {
 	$('.faq__button-learn-more').on('click', function () {
 		$('.faq__hidden-blocks').slideToggle(300);
@@ -145,7 +158,8 @@ const numbersCounter = () => {
 	var hasEntered = false;
 
 	window.addEventListener('scroll', e => {
-		var shouldAnimate = window.scrollY + window.innerHeight >= section.offsetTop;
+		var shouldAnimate =
+			window.scrollY + window.innerHeight >= section.offsetTop;
 
 		if (shouldAnimate && !hasEntered) {
 			hasEntered = true;
@@ -172,16 +186,18 @@ const numbersCounter = () => {
 
 (function () {
 	// swiper slider
-	var swiper = new Swiper("#roadmapSlider", {
+	var swiper = new Swiper('#roadmapSlider', {
+		slidesPerView: 1,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		},
 	});
 
 	// Functions init
 	Accordion();
 	sectionAnimations();
+	showMoreHowItWorks();
 	showMoreFaq();
 	showMoreTeam();
 	numbersCounter();

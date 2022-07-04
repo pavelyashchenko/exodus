@@ -143,6 +143,19 @@
   &:last-child
     margin-bottom 0
 
+.how-it-works__scheme
+  display none
+  text-align center
+  margin-bottom 150px
+
+  .scheme--desktop,
+  .scheme--mobile
+    img
+      max-width 100%
+
+  .scheme--mobile
+    display none
+
 .how-it-works__button
   text-align center
 
@@ -255,8 +268,26 @@
     line-height 20px
 
 .roadmap
+  background radial-gradient(100% 100% at 100% 0%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
+  padding-top 150px
+  margin-bottom 200px
+
   #roadmapSlider
     overflow visible
+
+    .swiper-buttons
+      max-width 1500px
+
+    .swiper-wrapper
+      .swiper-slide
+        #linesAnimation
+          position absolute
+          top -200px
+          left 50%
+          transform translateX(-50%)
+          margin 0 auto
+          width 1400px
+          z-index -1
 
 .roadmap__inner
   max-width 1076px
@@ -272,6 +303,146 @@
   line-height 20px
   max-width 628px
   margin 0 auto 50px
+
+.roadmap__items
+  display flex
+  align-items center
+  justify-content space-between
+
+  &:first-child
+    margin-bottom 370px
+
+.roadmap__item
+  display flex
+  position relative
+  border-radius 50%
+
+  &-main
+    margin auto
+    max-width 200px
+
+    p
+      font-size 16px
+      line-height 20px
+
+    ul
+      li
+        font-size 16px
+        line-height 20px
+        list-style-type disc
+
+  &-info
+    position absolute
+
+  &-number
+    display flex
+    width 50px
+    height 50px
+    background-color $white
+    border-radius 50%
+
+    span
+      margin auto
+      font-size 30px
+      line-height 37px
+      color $red
+      font-family $fontBold
+
+  .number--red
+    background radial-gradient(76% 76% at 41% 24%, #FF72AD 0%, #F1116F 73.44%, #5F093C 100%)
+
+    span
+      color $white
+
+  &-time
+    time
+      display inline-block
+      font-size 16px
+      line-height 20px
+      max-width 60px
+
+  &--first
+    width 243px
+    height 243px
+    background radial-gradient(85.67% 104.97% at 25.96% 87.82%, #FFE459 0%, #A02A95 50%, rgba(68, 18, 86, 0.3) 71.53%, rgba(120, 44, 112, 0) 100%)
+
+    .roadmap__item-info
+      bottom -75px
+
+      .roadmap__item-number
+        margin-bottom 11px
+
+  &--second
+    width 272px
+    height 272px
+    background radial-gradient(103.51% 84.48% at 9.21% 53.51%, #8459FF 0%, #482AA0 33.33%, rgba(35, 18, 86, 0.3) 71.53%, rgba(55, 54, 122, 0) 100%)
+    top 250px
+
+    .roadmap__item-info
+      top -115px
+      right 40px
+
+      .roadmap__item-number
+        margin-top 15px
+
+  &--third
+    width 277px
+    height 277px
+    background radial-gradient(79.52% 97.44% at 71.79% 94.71%, #59E1FF 0%, #2A6FA0 35.16%, rgba(35, 18, 86, 0.42) 84.94%, rgba(54, 65, 122, 0) 100%)
+    top -30px
+    right 40px
+
+    .roadmap__item-info
+      bottom -85px
+      right 10px
+
+      .roadmap__item-number
+        margin-bottom 11px
+
+  &--fourth
+    width 270px
+    height 270px
+    background radial-gradient(77.56% 95.03% at 81.89% 7.85%, #C059FF 0%, #5E2AA0 40.3%, rgba(36, 18, 86, 0.3) 70.28%, rgba(64, 54, 122, 0) 96.3%)
+    top -60px
+    left 80px
+
+    .roadmap__item-info
+      top -95px
+      right 10px
+
+      .roadmap__item-number
+        margin-top 11px
+
+  &--fifth
+    width 358px
+    height 358px
+    background radial-gradient(103.51% 84.48% at 9.21% 53.51%, #8459FF 0%, #482AA0 33.33%, rgba(35, 18, 86, 0.3) 71.53%, rgba(55, 54, 122, 0) 100%)
+    top 150px
+    left 110px
+
+    .roadmap__item-info
+      top 110px
+      left -70px
+
+      .roadmap__item-number
+        margin-bottom 11px
+
+  &--sixth
+    width 376px
+    height 375px
+    background radial-gradient(74.2% 90.92% at 77.65% 94.41%, #FFC759 0%, #A02A6A 40.18%, rgba(56, 18, 86, 0.3) 70.5%, rgba(49, 46, 109, 0) 100%)
+    top -200px
+    left 0
+
+    .roadmap__item-info
+      bottom -70px
+      right 70px
+
+      .roadmap__item-number
+        margin-bottom 11px
+
+.roadmap__mobile
+  display none
 
 .faq
   position relative
@@ -326,5 +497,32 @@
 .team__title
   max-width 213px
   margin 0 auto 8rem
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled
+  opacity 0
+
+.swiper-button-next,
+.swiper-button-prev
+  top 95% !important
+  width 39px !important
+
+  &::after
+    content ""
+    width 39px
+    height 63px
+    background-repeat no-repeat
+
+.swiper-button-next
+  right 15% !important
+
+  &::after
+    background-image url(../img/icons/arrow-next.svg)
+
+.swiper-button-prev
+  left 15% !important
+
+  &::after
+    background-image url(../img/icons/arrow-prev.svg)
 
 @import "media/_media-landing.styl"

@@ -81,8 +81,12 @@ block main
             span 4. 
             | There is no limit on how many referrals you can invite on the first level – this means you can build enormous trees of cashback that will reward you daily with passive income! The algorithm of Exodus is secured, transparent, verified, and signed by the smart contract.
 
+      .how-it-works__scheme
+        img(src="img/how-it-works/how-it-works.svg", alt="How it works scheme").scheme--desktop
+        img(src="img/how-it-works/how-it-works-mobile.svg", alt="How it works scheme").scheme--mobile
+
       .how-it-works__button
-        +button(href="#").button--red-filled
+        +button(type="button").how-it-works__button-learn-more.button--red-filled
           | Learn more
 
   section.benefits#benefits
@@ -169,17 +173,138 @@ block main
       p.roadmap__message
         | Our primary goal is to ensure that digital financial solutions are there for the people! We are working on getting all licenses needed to develop our credit card system that will allow the holder of the card to pay with crypto in their daily life!
         
-      .swiper#roadmapSlider
-        .swiper-wrapper
-          .swiper-slide
-            #linesAnimation
+    .swiper#roadmapSlider
+      .swiper-wrapper
+        .swiper-slide
+          #linesAnimation
+          .roadmap__inner#planets
+            .roadmap__items
+              .roadmap__item.roadmap__item--first.wow.fadeInDown
+                .roadmap__item-main
+                  p The difficult process of making up the idea of the algorithm took us a while…
+                .roadmap__item-info
+                  .roadmap__item-number
+                    span 1
+                  .roadmap__item-time
+                    time February 2022
+              
+              .roadmap__item.roadmap__item--second.wow.fadeInUp(data-wow-delay="1.3s")
+                .roadmap__item-main
+                  p The algorithm went from the theoretical phase into a real smart contract and the closed alpha test was initiated.
+                .roadmap__item-info
+                  .roadmap__item-time
+                    time March 2022
+                  .roadmap__item-number
+                    span 2
 
+              .roadmap__item.roadmap__item--third.wow.fadeInDown(data-wow-delay="2.5s")
+                .roadmap__item-main
+                  p The algorithm went from the theoretical phase into a real smart contract and the closed alpha test was initiated.
+                .roadmap__item-info
+                  .roadmap__item-number
+                    span 3
+                  .roadmap__item-time
+                    time April 2022
+                  
+            .roadmap__items
+              .roadmap__item.roadmap__item--fourth.wow.fadeInRight(data-wow-delay="5s")
+                .roadmap__item-main
+                  p The algorithm went from the theoretical phase into a real smart contract and the closed alpha test was initiated.
+                .roadmap__item-info
+                  .roadmap__item-time
+                    time May 2022
+                  .roadmap__item-number
+                    span 4
+              
+              .roadmap__item.roadmap__item--fifth.wow.fadeInUp(data-wow-delay="7s")
+                .roadmap__item-main
+                  ul 
+                    li Further development of the credit card system involving Visa was conducted and the beginning of the research for the best implementation of the Exodus Card started!
+                    li The NFT and smart contract algorithm are in the last steps of development with the Exodus Card.
+                .roadmap__item-info
+                  .roadmap__item-number
+                    span 5
+                  .roadmap__item-time
+                    time June 2022
+
+              .roadmap__item.roadmap__item--sixth.wow.fadeIn(data-wow-delay="8.5s")
+                .roadmap__item-main
+                  ul 
+                    li The blockchain journey is finally launched. Financial freedom is closer than you can imagine as the contract is deployed and the MINT EVENT is announced. 
+                    li Exodus Card is in the building with a variety of services based upon smart contracts and blockchain 
+                .roadmap__item-info
+                  .roadmap__item-number.number--red
+                    span 6
+                  .roadmap__item-time
+                    time July 2022
             
-          .swiper-slide
+        .swiper-slide
+          .roadmap__inner
             | Slide 2
 
+      .swiper-buttons
         .swiper-button-next
         .swiper-button-prev
+
+    .roadmap__mobile
+      .roadmap__items
+        .roadmap__item.roadmap__item--first
+          .roadmap__item-main
+            p The difficult process of making up the idea of the algorithm took us a while…
+          .roadmap__item-info
+            .roadmap__item-number
+              span 1
+            .roadmap__item-time
+              time February 2022
+        
+        .roadmap__item.roadmap__item--second
+          .roadmap__item-main
+            p The algorithm went from the theoretical phase into a real smart contract and the closed alpha test was initiated.
+          .roadmap__item-info
+            .roadmap__item-time
+              time March 2022
+            .roadmap__item-number
+              span 2
+
+        .roadmap__item.roadmap__item--third
+          .roadmap__item-main
+            p The algorithm went from the theoretical phase into a real smart contract and the closed alpha test was initiated.
+          .roadmap__item-info
+            .roadmap__item-number
+              span 3
+            .roadmap__item-time
+              time April 2022
+
+        .roadmap__item.roadmap__item--fourth
+          .roadmap__item-main
+            p The algorithm went from the theoretical phase into a real smart contract and the closed alpha test was initiated.
+          .roadmap__item-info
+            .roadmap__item-number
+              span 4
+            .roadmap__item-time
+              time May 2022
+        
+        .roadmap__item.roadmap__item--fifth
+          .roadmap__item-main
+            ul 
+              li Further development of the credit card system involving Visa was conducted and the beginning of the research for the best implementation of the Exodus Card started!
+              li The NFT and smart contract algorithm are in the last steps of development with the Exodus Card.
+          .roadmap__item-info
+            .roadmap__item-number
+              span 5
+            .roadmap__item-time
+              time June 2022
+
+        .roadmap__item.roadmap__item--sixth
+          .roadmap__item-main
+            ul 
+              li The blockchain journey is finally launched. Financial freedom is closer than you can imagine as the contract is deployed and the MINT EVENT is announced. 
+              li Exodus Card is in the building with a variety of services based upon smart contracts and blockchain 
+          .roadmap__item-info
+            .roadmap__item-number.number--red
+              span 6
+            .roadmap__item-time
+              time July 2022
 
   section.faq#faq.wow.fadeInDown(data-wow-delay=".2s")
     .faq__inner
