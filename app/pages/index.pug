@@ -1,10 +1,7 @@
 extends ../includes/page
 
-include ../includes/modules/price-blocks/index
-include ../includes/modules/benefits-blocks/index
 include ../includes/modules/accordion/index
 include ../includes/modules/team-members/index
-include ../includes/modules/loader/index
 
 block head
   - var title = "Exodus Landing"
@@ -138,7 +135,7 @@ block main
 
         .advantages__item
           .advantages__item-img
-            img(src="img/advantages/investment.svg", alt="Investment")
+            img(src="img/advantages/Investment.svg", alt="Investment")
           
           h4.advantages__item-title
             span 2. 
@@ -165,6 +162,24 @@ block main
             | The system is Independent and self-governed
           p.advantages__item-message
             | Blockchain technology, on which the algorithm is built, provides a risk-free and secure environment for the trading of assets. It does not need any further activities for intervention and enables you to create income without allowing access to other users' assets, so providing security for all users of the platform.
+
+  section.roadmap#roadmap
+    .roadmap__inner
+      .roadmap__title.section-title Roadmap
+      p.roadmap__message
+        | Our primary goal is to ensure that digital financial solutions are there for the people! We are working on getting all licenses needed to develop our credit card system that will allow the holder of the card to pay with crypto in their daily life!
+        
+      .swiper#roadmapSlider
+        .swiper-wrapper
+          .swiper-slide
+            #linesAnimation
+
+            
+          .swiper-slide
+            | Slide 2
+
+        .swiper-button-next
+        .swiper-button-prev
 
   section.faq#faq.wow.fadeInDown(data-wow-delay=".2s")
     .faq__inner
@@ -279,4 +294,3 @@ block main
       })
 
   +modal-connect()
-    

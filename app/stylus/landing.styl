@@ -1,10 +1,6 @@
 @import "base/_global"
-@import "../includes/modules/price-blocks/index.styl"
-@import "../includes/modules/benefits-blocks/index.styl"
-@import "../includes/modules/roadmap/index.styl"
 @import "../includes/modules/accordion/index.styl"
 @import "../includes/modules/team-members/index.styl"
-@import "../includes/modules/loader/index.styl"
 
 .intro
   position relative
@@ -128,6 +124,9 @@
 .how-it-works__illustration
   width 50%
   margin-right 30px
+
+  #cardsAnimation
+    transform scale(1.5)
 
 .how-it-works__info
   width 50%
@@ -254,6 +253,25 @@
   &-message
     font-size 16px
     line-height 20px
+
+.roadmap
+  #roadmapSlider
+    overflow visible
+
+.roadmap__inner
+  max-width 1076px
+  margin 0 auto
+  padding 0 15px
+
+.roadmap__title
+  text-align center
+  margin-bottom 31px
+
+.roadmap__message
+  font-size 16px
+  line-height 20px
+  max-width 628px
+  margin 0 auto 50px
 
 .faq
   position relative

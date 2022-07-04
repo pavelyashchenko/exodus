@@ -100,6 +100,14 @@ const sectionAnimations = () => {
 		autoplay: true,
 		path: 'scripts/animations/cards-anim.json',
 	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#linesAnimation'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/roadmap-anim.json',
+	});
 };
 
 // FAQ Show more button
@@ -163,6 +171,14 @@ const numbersCounter = () => {
 };
 
 (function () {
+	// swiper slider
+	var swiper = new Swiper("#roadmapSlider", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+
 	// Functions init
 	Accordion();
 	sectionAnimations();
