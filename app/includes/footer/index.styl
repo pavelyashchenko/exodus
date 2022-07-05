@@ -22,45 +22,44 @@
   width 200px
 
 .footer__info
-  display flex
+  img
+    width 100%
+
+.footer__icons
+  display flex 
   align-items center
+  justify-content space-between
 
-  &-text
-    font-size 12px
-    line-height 19px
-    margin-right 3px
-    max-width 86px
-
-  &-logo
-    max-width 114px
+  &-item
+    display block
+    transition all 0.3s
+    width 25px
+    height 25px
 
     img
       width 100%
 
-.footer__icons
-  &-item
-    transition all 0.3s
-
     &:not(:first-child)
-      margin-left 1.5rem
+      margin-left 1rem
 
     &:hover
       transform scale(1.2)
 
 .footer__center
-  max-width 430px
+  max-width 500px
   width 100%
 
 .footer__right
   display flex
   align-items center
   justify-content space-between
-  width 220px
 
 .footer__follow
   font-weight 300
   font-size 1.6rem
   line-height 1.9rem
+  white-space nowrap
+  margin-right 10px
 
 .footer__menu
   display flex
@@ -84,8 +83,12 @@
       color $green
 
 @media (max-width 1024px)
-  .footer__right
-    width 220px
+  .footer__menu
+    &-ul
+      width 80px
+
+  .footer__center
+    max-width 380px
 
 @media (max-width 768px)
   .footer__logo img
@@ -106,9 +109,6 @@
 
   .footer__center
     max-width 200px
-
-  .footer__right
-    width 200px
 
   .footer__follow
     font-size 16px

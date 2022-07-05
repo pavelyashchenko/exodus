@@ -126,7 +126,7 @@ const showMoreHowItWorks = () => {
 
 const showMoreFaq = () => {
 	$('.faq__button-learn-more').on('click', function () {
-		$('.faq__hidden-blocks').slideToggle(300);
+		$('.faq__hidden-blocks').toggleClass('is-active')
 
 		$(this).toggleClass('is-active');
 		if ($(this).hasClass('is-active')) {

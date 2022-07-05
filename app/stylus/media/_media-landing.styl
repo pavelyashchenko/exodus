@@ -99,6 +99,42 @@
     width 100%
     max-width 100%
 
+  .about
+    margin-bottom 150px
+
+  .about__inner
+    flex-direction column-reverse
+
+  .about__info
+    width 100%
+    margin-right 0
+
+  .about__illustration
+    width 100%
+
+    #doorsAnimation
+      svg
+        height 500px !important
+
+  .how-it-works
+    margin-bottom 150px
+
+  .how-it-works__wrapper
+    flex-direction column
+
+  .how-it-works__illustration
+    width 100%
+    margin-right 0
+
+    #cardsAnimation
+      transform scale(1)
+
+  .how-it-works__info
+    width 100%
+
+  .benefits
+    margin-bottom 150px
+
   #roadmapSlider
     display none
 
@@ -108,7 +144,7 @@
   .roadmap__items
     position relative
     flex-direction column
-    
+
     &:first-child
       margin-bottom 0
 
@@ -198,6 +234,29 @@
       .roadmap__item-main
         max-width 250px
 
+  .numbers__items
+    flex-direction column
+    align-items center
+
+  .numbers__item
+    margin-bottom 50px
+
+  .advantages__items
+    flex-direction column
+
+  .advantages__item
+    width 100%
+    margin-bottom 90px
+
+    &:last-child
+      margin-bottom 0
+
+  .advantages__item-img
+    margin-bottom 20px
+
+  .advantages__item-title
+    min-height auto
+
 @media (max-width 650px)
   .intro__illustration
     &-circle
@@ -212,8 +271,29 @@
   .intro__social
     display none
 
+  .how-it-works__scheme
+    .scheme--desktop
+      display none
+
+    .scheme--mobile
+      display block
+
+  .benefits__inner
+    flex-direction column
+    align-items center
+
+  .benefits__item
+    width 100%
+    text-align center
+    margin-bottom 50px
+
+    &-icon
+      margin 0 auto
+
 @media (max-width 425px)
   .intro__inner
+    margin-bottom 100px
+
     picture,
     img
       width 80%

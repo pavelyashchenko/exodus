@@ -311,18 +311,22 @@ block main
       h2.faq__title.section-title FAQ
 
       +accordion()
-        +accordion-item("<h3>How much will a member get for referring new members?</h3>")
-          | For the first two referrals, the participant receives 100% from each, starting from the third, 50% for each new participant. The referral program only works to&nbsp;attract new members to&nbsp;the first level.
-        +accordion-item("<h3>If I buy more NFTs in the same level, will another queue open?</h3>")
+        +accordion-item("<h3>How much credit will an existing member get for bringing in new customers?</h3>")
+          | For evet referral in the first cycle, you will get 20% for each referral. In accordance your referral will get 20% from his referrals in the first cycle, but will get another 10% for each referral your referral brings and the same is for the third cycle which will reward you with a 5% reward but the whole system still gets the same % per cycle as was explained above.
+        +accordion-item("<h3>I'm interested in purchasing multiple NFTs, can I?</h3>")
           | No. You will simply have more NFTs. One NFT is&nbsp;enough to&nbsp;participate in&nbsp;the program. You can buy NFT as&nbsp;a&nbsp;gift.
-        +accordion-item("<h3>Can I buy the 5th level immediately without going through the other levels below?</h3>")
+        +accordion-item("<h3>How the DAO system will work?</h3>")
           | It&nbsp;will be&nbsp;possible to&nbsp;buy Level 5&nbsp;NFTs on&nbsp;the secondary market. You can mint NFT by&nbsp;levels strictly sequentially. In&nbsp;order to&nbsp;mint level 5&nbsp;NFTs, you must have NFTs of&nbsp;the first 4&nbsp;levels in&nbsp;your wallet.
-        +accordion-item("<h3>If I buy an NFT from level 2 and give it as a gift, will the new owner be able to take part in level 2 right away with it?</h3>")
+        +accordion-item("<h3>How many referrals I can add to my tree /or trees?</h3>")
           | No. Ownership of&nbsp;NFT tokens of&nbsp;all previous levels will be&nbsp;checked. If&nbsp;the wallet of&nbsp;the new owner contains NFT level&nbsp;1, he&nbsp;will be&nbsp;able to&nbsp;activate the 2nd level and join the queue.
-        +accordion-item("<h3>If I join the tier 2 queue and sell my only tier 2 NFT, will I still be in the queue?</h3>")
+        +accordion-item("<h3>Will the NFT, which currently is in my wallet, also can be put up for sale?</h3>")
           | You will remain in&nbsp;line, but you will not receive the money. Your reward will go&nbsp;into the system.
-        +accordion-item("<h3>Will my place in the queue be sold along with the NFT?</h3>")
-          | No.
+        +accordion-item("<h3>When can I withdraw my rewards for bringing referrals?</h3>")
+          | You will remain in&nbsp;line, but you will not receive the money. Your reward will go&nbsp;into the system.
+        +accordion-item("<h3>When can I withdraw my rewards for bringing referrals?</h3>")
+          | You will remain in&nbsp;line, but you will not receive the money. Your reward will go&nbsp;into the system.
+        +accordion-item("<h3>Is there a possibility for the project to block the withdrawal function?</h3>")
+          | You will remain in&nbsp;line, but you will not receive the money. Your reward will go&nbsp;into the system.
 
         .faq__hidden-blocks
           +accordion-item("<h3>Can I withdraw money from my balance while in the queue?</h3>")
@@ -335,8 +339,14 @@ block main
             | You may get qualification by&nbsp;referring two new level 1&nbsp;NFT buyers or&nbsp;doing a&nbsp;turbo boost (buy without attracting buyers at&nbsp;double price of&nbsp;level&nbsp;1).
           +accordion-item("<h3>How to get into the queue of the next level?</h3>")
             | To&nbsp;get to&nbsp;the next level, you need to&nbsp;have passed the qualification in&nbsp;the first level and have the NFT of&nbsp;the previous levels.
+          +accordion-item("<h3>What do I need to do to get in line?</h3>")
+            | In&nbsp;the first level, you need to&nbsp;buy a&nbsp;level 1&nbsp;NFT and earn a&nbsp;qualification. You will automatically be&nbsp;placed in&nbsp;a&nbsp;queue after qualifying.
+          +accordion-item("<h3>How to get a qualification?</h3>")
+            | You may get qualification by&nbsp;referring two new level 1&nbsp;NFT buyers or&nbsp;doing a&nbsp;turbo boost (buy without attracting buyers at&nbsp;double price of&nbsp;level&nbsp;1).
+          +accordion-item("<h3>How to get into the queue of the next level?</h3>")
+            | To&nbsp;get to&nbsp;the next level, you need to&nbsp;have passed the qualification in&nbsp;the first level and have the NFT of&nbsp;the previous levels.
       
-      +button.faq__button-learn-more(type="button")
+      +button.faq__button-learn-more(type="button").button--red-filled
         | Learn more
 
   section.team#team.wow.fadeInLeft(data-wow-delay=".2s")
@@ -347,73 +357,73 @@ block main
         list: [
           {
             visibility: "visible",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Tomas Abbar",
+            imageSrc: "../img/team/john-grider.png",
+            name: "John Grider",
             position: "Founder",
-            email: "tomas@aurabank.io"
+            email: "john@exoduscard.io"
           },
           {
             visibility: "visible",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Ann Maisner",
-            position: "Co-Founder",
-            email: "ann@aurabank.io"
+            imageSrc: "../img/team/peter-dumbrowski.png",
+            name: "Peter Dumbrowski",
+            position: "CEO",
+            email: "peter@exoduscard.io"
           },
           {
             visibility: "visible",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Andrew Shimmer",
-            position: "Chief Executive Officer",
-            email: "andrew@aurabank.io"
+            imageSrc: "../img/team/alex-kratov.png",
+            name: "Alex Kratov",
+            position: "CFO",
+            email: "finance@exoduscard.io"
           },
           {
             visibility: "visible",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Max Carter",
-            position: "Chief Financial Officer",
-            email: "finance@aurabank.io"
+            imageSrc: "../img/team/laxus-bastia.png",
+            name: "Laxus Bastia",
+            position: "CMO",
+            email: "advertising@exoduscard.io"
           },
           {
-            visibility: "hidden",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Giang Tran",
-            position: "Chief Marketing Officer",
-            email: "advertising@aurabank.io"
+            visibility: "visible",
+            imageSrc: "../img/team/john-grider.png",
+            name: "John Grider",
+            position: "Founder",
+            email: "john@exoduscard.io"
           },
           {
-            visibility: "hidden",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Cana Alberona",
-            position: "Chief Operating Officer",
-            email: ""
+            visibility: "visible",
+            imageSrc: "../img/team/peter-dumbrowski.png",
+            name: "Peter Dumbrowski",
+            position: "CEO",
+            email: "peter@exoduscard.io"
           },
           {
-            visibility: "hidden",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Victoria Alvares",
-            position: "UI/UX Designer",
-            email: ""
+            visibility: "visible",
+            imageSrc: "../img/team/alex-kratov.png",
+            name: "Alex Kratov",
+            position: "CFO",
+            email: "finance@exoduscard.io"
           },
           {
-            visibility: "hidden",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Katarina Maran",
-            position: "Head of  Technical Support",
-            email: ""
+            visibility: "visible",
+            imageSrc: "../img/team/laxus-bastia.png",
+            name: "Laxus Bastia",
+            position: "CMO",
+            email: "advertising@exoduscard.io"
           },
           {
-            visibility: "hidden",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Antony Piky",
-            position: "Search Engine Optimization",
-            email: ""
+            visibility: "visible",
+            imageSrc: "../img/team/alex-kratov.png",
+            name: "Alex Kratov",
+            position: "CFO",
+            email: "finance@exoduscard.io"
           },
           {
-            visibility: "hidden",
-            imageSrc: "https://i.trbna.com/preset/bi/e/92/47d9e624911ecbc6dc927ef034844.jpeg",
-            name: "Yurii Milkovic",
-            position: "Java Script Developer",
-            email: ""
+            visibility: "visible",
+            imageSrc: "../img/team/laxus-bastia.png",
+            name: "Laxus Bastia",
+            position: "CMO",
+            email: "advertising@exoduscard.io"
           }
         ]
       })

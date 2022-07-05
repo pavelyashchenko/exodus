@@ -6,11 +6,10 @@ mixin team-members(data)
     each member in members
       .team__members-wrapper
         .team__members-image
-          .members-image-wrapper
           img(src=`${member.imageSrc}`, alt=`${member.imageSrc}`)
         h4.team__members-name= member.name
         p.team__members-position= member.position
         a(href=`mailto:${member.email}`).team__members-email= member.email
 
-  +button(type="button").team__members-button
+  +button(type="button").team__members-button.button--red-filled
     | Show more

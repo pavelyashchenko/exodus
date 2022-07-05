@@ -2,50 +2,27 @@
   text-align left
   margin-bottom 4rem
 
+ul[role="tablist"]
+  display flex
+  align-items center
+  flex-wrap wrap
+
 .accordion__title
   font-size 16px
   line-height 24px
   letter-spacing 0.01em
-  color $white
-  opacity .7
+  color $text
   display block
   position relative
-  
+
   &:hover
     text-decoration none
 
   .accordion__title-decoration
     display none
 
-  &::after, &::before
-    content ""
-    display table
-    position absolute
-    top 50%
-    background-color #00C8A0
-    transition transform 0.17s ease-in-out
-    will-change transform
-
-  &::after
-    margin-top -8px
-    right -30px
-    width 2px
-    height 14px
-
-  &::before
-    margin-top -2px
-    right -36px
-    width 14px
-    height 2px
-
   &[aria-selected="true"]
     opacity 1
-
-    &::before
-      transform rotate(180deg)
-
-    &::after
-      transform rotate(90deg)
 
 .accordion__title h3
   position relative
@@ -55,18 +32,12 @@
   line-height 3rem
 
 .accordion__item
-  max-width 625px
-  margin 0 auto
-  padding 2rem 7rem 1.6rem 3.3rem
-  background-image none
+  max-width 25%
+  padding 19px 15px 25px 25px
   transition margin 0.2s
 
   &.is-active
-    background-image url("../img/nineth/tab-bg.svg")
-    background-repeat no-repeat
-    background-size contain
-    background-position top center
-    margin 2rem auto 1rem
+    background radial-gradient(145.16% 113.2% at -3.45% -2.44%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
 
     &:last-child
       margin-bottom 0
@@ -94,10 +65,16 @@
     margin-top 12px
     margin-bottom 12px
 
-@media(max-width: 768px)
+.faq__hidden-blocks
+  display flex
+
+@media (max-width 768px)
   .accordion__title
     h3
-      font-size 16px
+      font-size 18px
 
   .accordion__body
-    font-size 12px
+    font-size 14px
+
+  .accordion__item
+    max-width 100%

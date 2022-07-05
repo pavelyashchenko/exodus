@@ -29,6 +29,8 @@ mixin header()
             img(src= "img/icons/logo.svg" alt="Logo")
 
         .header__right
+          button.header__right-metamask(data-izimodal-open="#modal-connect")
+            img(src="img/icons/metamask.svg", alt="Metamask button")
           .header__burger-button
             button
               svg
@@ -63,3 +65,8 @@ mixin header()
           if headerButton === "cabinet"
             +button(href="index.html")
               | Main Page
+
+        .header__social
+          each key, value in {'img/icons/twitter.svg': 'Twitter', 'img/icons/post.svg': 'Post', 'img/icons/telegram.svg': 'Telegram', 'img/icons/discord.svg': 'Discord'}
+            a.header__social-item(href="#" target="_blank")
+              img(src=value, alt=key)

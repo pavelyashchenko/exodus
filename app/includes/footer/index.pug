@@ -5,9 +5,7 @@ mixin footer()
         a.footer__logo(href="index.html")
           img(src="img/icons/logo.svg", alt="Logo footer")
         .footer__info
-          p.footer__info-text System powered by
-          .footer__info-logo
-            img(src="img/cabinet/Binance_logo.svg", alt="Binance smart chain logo")
+          img(src="img/icons/powered-by.svg", alt="Binance smart chain logo")
 
       .footer__center
         nav.footer__menu
@@ -35,6 +33,6 @@ mixin footer()
       .footer__right 
         span.footer__follow Follow Us:
         .footer__icons
-          each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-post.svg': 'Post', 'img/icons/footer-telegram.svg': 'Telegram',}
+          each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-post.svg': 'Post', 'img/icons/footer-telegram.svg': 'Telegram', 'img/icons/footer-discord.svg': 'Discord'}
             a.footer__icons-item(href="#" target="_blank")
               img(src=value, alt=key)

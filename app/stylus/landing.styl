@@ -150,6 +150,8 @@
 
   .scheme--desktop,
   .scheme--mobile
+    width 100%
+
     img
       max-width 100%
 
@@ -445,30 +447,14 @@
   display none
 
 .faq
-  position relative
   margin-bottom 7rem
   padding-top 10rem
 
-  &::before
-    position absolute
-    content ""
-    top -80px
-    left 50%
-    transform translateX(-50%)
-    max-width 1120px
-    height 1292px
-    background-image url("../img/nineth/faq-lines.svg")
-    width 100%
-    background-repeat no-repeat
-    background-position center top
-    background-size contain
-    z-index -1
-
 .faq__inner
   text-align center
-  max-width 722px
-  padding 0 15px
+  max-width 1076px
   margin 0 auto
+  padding 0 15px
 
 .faq__title
   max-width 90px
@@ -477,25 +463,26 @@
 .faq__hidden-blocks
   display none
 
+  &.is-active
+    display flex
+    flex-wrap wrap
+    align-items center
+
 .team
   position relative
   padding-bottom 15rem
   overflow hidden
   padding-top 10rem
-  background radial-gradient(80.54% 59.53% at 51.46% 80.48%, #139077 0%, rgba(17, 77, 65, 0.8) 51.56%, rgba(11, 39, 34, 0) 100%)
-  background-image url("../img/tenth/team-lines-bg.svg")
-  background-repeat no-repeat
-  background-position center
-  background-size cover
+  background radial-gradient(108.76% 100% at 50.69% 100%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
 
 .team__inner
   text-align center
-  max-width 943px
+  max-width 1076px
   padding 0 15px
   margin 0 auto
 
 .team__title
-  max-width 213px
+  max-width 245px
   margin 0 auto 8rem
 
 .swiper-button-next.swiper-button-disabled,
@@ -517,12 +504,12 @@
   right 15% !important
 
   &::after
-    background-image url(../img/icons/arrow-next.svg)
+    background-image url("../img/icons/arrow-next.svg")
 
 .swiper-button-prev
   left 15% !important
 
   &::after
-    background-image url(../img/icons/arrow-prev.svg)
+    background-image url("../img/icons/arrow-prev.svg")
 
 @import "media/_media-landing.styl"
