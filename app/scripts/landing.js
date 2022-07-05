@@ -108,6 +108,70 @@ const sectionAnimations = () => {
 		autoplay: true,
 		path: 'scripts/animations/roadmap-anim.json',
 	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#linesAnimation2'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/roadmap-anim2.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#buyNft'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/buy-anim.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#refferals'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/refferals-anim.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#earn'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/money-anim.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#binance'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/binance-anim.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#investments'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/investments-anim.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#invite'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/invite-anim.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#system'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/system-anim.json',
+	});
 };
 
 // Show more buttons
@@ -188,6 +252,8 @@ const numbersCounter = () => {
 	// swiper slider
 	var swiper = new Swiper('#roadmapSlider', {
 		slidesPerView: 1,
+		speed: 1000,
+		allowTouchMove: false,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',

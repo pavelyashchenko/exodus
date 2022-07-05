@@ -92,19 +92,16 @@ block main
   section.benefits#benefits
     .benefits__inner
       .benefits__item
-        .benefits__item-icon
-          img(src="img/benefits/buy.svg", alt="Buy icon")
-        p.benefits__item-info Buy NFT-pass
+        .benefits__item-icon#buyNft
+        p.benefits__item-info Buy NFT-<br>pass
       
       .benefits__item
-        .benefits__item-icon
-          img(src="img/benefits/invite.svg", alt="Invite icon")
-        p.benefits__item-info Invite refferals
+        .benefits__item-icon#refferals
+        p.benefits__item-info Invite<br>refferals
       
       .benefits__item
-        .benefits__item-icon
-          img(src="img/benefits/money.svg", alt="Money icon")
-        p.benefits__item-info Earn money
+        .benefits__item-icon#earn
+        p.benefits__item-info Earn<br>money
 
   section.numbers#numbers
     .numbers__inner
@@ -127,8 +124,7 @@ block main
       .advantages__title.section-title Advantages
       .advantages__items
         .advantages__item
-          .advantages__item-img
-            img(src="img/advantages/binance.svg", alt="Binance")
+          .advantages__item-img#binance
           
           h4.advantages__item-title
             span 1. 
@@ -138,8 +134,7 @@ block main
             | Each user can monitor all activities and transactions without the danger of fraud thanks to the transparency of the system, which is guaranteed by Binance Smart Chain, which also provides extremely cheap user fees.
 
         .advantages__item
-          .advantages__item-img
-            img(src="img/advantages/Investment.svg", alt="Investment")
+          .advantages__item-img#investments
           
           h4.advantages__item-title
             span 2. 
@@ -148,8 +143,7 @@ block main
             | You could make up to one hundred percent of the level's original purchase price with each cycle, and you wouldn't have to take any risks or put in any work! There are no withdrawal limitations, the holder of the NFT can withdraw at any moment.
 
         .advantages__item
-          .advantages__item-img
-            img(src="img/advantages/invite.svg", alt="Invite")
+          .advantages__item-img#invite
           
           h4.advantages__item-title
             span 3. 
@@ -158,8 +152,7 @@ block main
             | Low barriers to entry to gain references: To acquire referrals, all that is required of you is to give your link to a family, friend, or even just to a stranger you meet on social networks. You will then earn an immediate reward, which will be in your wallet and ready for withdrawal when the user has completed the last step of joining the site, which is the purchase of their own NFT.
 
         .advantages__item
-          .advantages__item-img
-            img(src="img/advantages/system.svg", alt="System")
+          .advantages__item-img#system
           
           h4.advantages__item-title
             span 4. 
@@ -177,7 +170,7 @@ block main
       .swiper-wrapper
         .swiper-slide
           #linesAnimation
-          .roadmap__inner#planets
+          .roadmap__inner
             .roadmap__items
               .roadmap__item.roadmap__item--first.wow.fadeInDown
                 .roadmap__item-main
@@ -239,6 +232,7 @@ block main
                     time July 2022
             
         .swiper-slide
+          #linesAnimation2
           .roadmap__inner
             | Slide 2
 
