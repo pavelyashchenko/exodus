@@ -264,13 +264,15 @@
 
   #roadmapSlider
     overflow visible
+    max-height 1050px
 
     .swiper-buttons
       max-width 1500px
 
     .swiper-wrapper
       .swiper-slide
-        #linesAnimation
+        #linesAnimation,
+        #linesAnimation2
           position absolute
           top -200px
           left 50%
@@ -431,6 +433,74 @@
       .roadmap__item-number
         margin-bottom 11px
 
+  &--seventh
+    width 365px
+    height 365px
+    background radial-gradient(103.51% 84.48% at 9.21% 53.51%, #8459FF 0%, #482AA0 33.33%, rgba(35, 18, 86, 0.3) 71.53%, rgba(55, 54, 122, 0) 100%)
+    top 240px
+    left 220px
+
+    .roadmap__item-main
+      max-width 250px
+
+    .roadmap__item-info
+      top -90px
+      left 80px
+
+      .roadmap__item-time
+        margin-bottom 10px
+
+  &--eighth
+    width 314px
+    height 314px
+    background radial-gradient(76.02% 93.15% at 76.27% 90.13%, #FFC759 0%, #A02A6A 40.18%, rgba(56, 18, 86, 0.3) 70.5%, rgba(49, 46, 109, 0) 100%)
+    top -60px
+    left -120px
+
+    .roadmap__item-main
+      max-width 250px
+
+    .roadmap__item-info
+      bottom -20px
+      right -40px
+
+      .roadmap__item-time
+        margin-bottom 10px
+
+  &--nineth
+    width 351px
+    height 351px
+    background radial-gradient(79.52% 97.44% at 71.79% 94.71%, #59E1FF 0%, #2A6FA0 35.16%, rgba(35, 18, 86, 0.42) 84.94%, rgba(54, 65, 122, 0) 100%)
+    top -310px
+    right 0
+
+    .roadmap__item-main
+      max-width 250px
+
+    .roadmap__item-info
+      top -60px
+      left -40px
+
+      .roadmap__item-time
+        margin-bottom 10px
+
+  &--tenth
+    width 287px
+    height 287px
+    background radial-gradient(77.56% 95.03% at 81.89% 7.85%, #C059FF 0%, #5E2AA0 40.3%, rgba(36, 18, 86, 0.3) 70.28%, rgba(64, 54, 122, 0) 96.3%)
+    top -85px
+    left 100px
+
+    .roadmap__item-main
+      max-width 250px
+
+    .roadmap__item-info
+      top -60px
+      left -20px
+
+      .roadmap__item-time
+        margin-bottom 10px
+
 .roadmap__mobile
   display none
 
@@ -481,7 +551,7 @@
 .swiper-button-prev
   top 95% !important
   width 39px !important
-  transition all .5s
+  transition all 0.5s
 
   &::after
     content ""

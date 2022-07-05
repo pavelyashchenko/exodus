@@ -117,6 +117,7 @@ const sectionAnimations = () => {
 		path: 'scripts/animations/roadmap-anim2.json',
 	});
 
+	// icons
 	bodymovin.loadAnimation({
 		container: document.querySelector('#buyNft'),
 		renderer: 'svg',
