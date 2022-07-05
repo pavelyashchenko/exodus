@@ -37,7 +37,7 @@ block main
         h1.intro__title Exodus Pass
         p.intro__message
           | The Exodus Pass is&nbsp;a&nbsp;new kind of&nbsp;NFT, integrating digital financial solutions in&nbsp;the era of&nbsp;web 3. Web 3&nbsp;is unique by&nbsp;itself, and it&nbsp;provides the ground for the progress and change Exodus will introduce to&nbsp;the world of&nbsp;digital finance. The Exodus card will provide you with the necessary digital financial solutions in&nbsp;the nearest future.
-        +button(href="#").button--red-filled
+        +button(href="#").button--red-filled(data-izimodal-open="#modal-connect")
           | Join Us!
         .intro__social
           each key, value in {'img/intro/Twitter.svg': 'Twitter', 'img/intro/Post.svg': 'Post', 'img/intro/Telegram.svg': 'Telegram', 'img/intro/Discord.svg': 'Discord',}
