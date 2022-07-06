@@ -189,6 +189,20 @@ const showMoreHowItWorks = () => {
 	});
 };
 
+const showMoreRoadmap = () => {
+	$('.roadmap__mobile-button button').on('click', function () {
+		$('.roadmap__item:nth-child(n+7)').toggleClass('is-active')
+		$('.roadmap__items').toggleClass('is-active')
+
+		$(this).toggleClass('is-active');
+		if ($(this).hasClass('is-active')) {
+			$(this).text('Show less');
+		} else {
+			$(this).text('Learn more');
+		}
+	});
+};
+
 const showMoreFaq = () => {
 	$('.faq__button-learn-more').on('click', function () {
 		$('.faq__hidden-blocks').toggleClass('is-active')
@@ -265,6 +279,7 @@ const numbersCounter = () => {
 	Accordion();
 	sectionAnimations();
 	showMoreHowItWorks();
+	showMoreRoadmap();
 	showMoreFaq();
 	showMoreTeam();
 	numbersCounter();

@@ -82,8 +82,75 @@
       .roadmap__item-main
         max-width 160px
 
-  .swiper-button-next, .swiper-button-prev
+    &--seventh
+      width 290px
+      height 290px
+      top 150px
+      left 20vw
+
+      .roadmap__item-main
+        max-width 230px
+
+    &--eighth
+      width 310px
+      height 310px
+      top -130px
+      left -100px
+
+      .roadmap__item-info
+        bottom -13px
+        right -25px
+
+    &--nineth
+      width 320px
+      height 320px
+      top -380px
+      right 90px
+
+      .roadmap__item-info
+        left 50px
+
+    &--tenth
+      width 250px
+      height 250px
+      top -237px
+      left 140px
+
+      .roadmap__item-main
+        max-width 200px
+
+      .roadmap__item-info
+        top -70px
+        left 40px
+
+  .swiper-button-next,
+  .swiper-button-prev
     top 80% !important
+
+@media (max-width 993px)
+  .roadmap__item
+    &--nineth
+      top -410px
+      right 10px
+
+    &--tenth
+      left 12vw
+
+@media (max-width 885px)
+  .roadmap__item
+    &--eighth
+      left -40px
+
+    &--nineth
+      right -20px
+
+    &--tenth
+      left 7vw
+
+@media (max-width 823px)
+  .roadmap__item
+    &--tenth
+      left 4vw
 
 @media (max-width 768px)
   .intro__inner
@@ -141,11 +208,20 @@
   .benefits
     margin-bottom 150px
 
+  .roadmap
+    margin-bottom 80px
+
   #roadmapSlider
     display none
 
   .roadmap__mobile
     display block
+
+    &-button
+      position relative
+      text-align center
+      margin-top -100px
+      z-index 1
 
   .roadmap__items
     position relative
@@ -167,7 +243,17 @@
       background-size contain
       z-index -1
 
+    &.is-active
+      &::before
+        background-image url("../img/roadmap/roadmap-line-full.svg")
+
   .roadmap__item
+    &:nth-child(n+7)
+      display none
+
+    &.is-active
+      display flex
+
     &-main
       p
         font-size 16px
@@ -234,11 +320,49 @@
     &--sixth
       width 376px
       height 375px
-      top -280px
-      left -20px
+      top -260px
+      left -50px
 
       .roadmap__item-main
-        max-width 250px
+        max-width 160px
+
+    &--seventh
+      width 330px
+      height 330px
+      top -160px
+      left 30px
+
+      .roadmap__item-info
+        bottom -60px
+        top auto
+
+      .roadmap__item-main
+        max-width 220px
+
+        p
+          font-size 14px
+
+    &--eighth
+      top -90px
+      left -30px
+      margin-bottom 140px
+
+      .roadmap__item-info
+        bottom -15px
+
+    &--nineth
+      top -110px
+      right -20px
+      margin-bottom 140px
+
+    &--tenth
+      top -130px
+      left 0
+      margin-bottom 140px
+
+      .roadmap__item-info
+        top -100px
+        left 90px
 
   .numbers__items
     flex-direction column
@@ -318,17 +442,14 @@
   .roadmap__item
     &--fourth
       .roadmap__item-info
-        top -95px
-
+        top -75px
 
     &--fifth
       width 325px
       height 325px
-      left 0
-      
-      .roadmap__item-main
+      left 20px
 
-
+      .roadmap__item-main,
       .roadmap__item-info
-        top -40px
-        left 100px
+        top -70px
+        left 130px
