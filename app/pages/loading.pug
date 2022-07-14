@@ -1,0 +1,19 @@
+extends ../includes/page
+
+block head
+  - var title = "Exodus Landing"
+  - var headerButton = "landing"
+
+block styles
+  link(rel="stylesheet" href="css/libs.min.css")
+  link(rel="stylesheet" href="css/landing.min.css")
+
+block scripts 
+  script(src="scripts/libs.min.js")
+  script(src="scripts/main.js")
+  script(src="scripts/landing.js")
+
+block main
+  section.loader
+    .loader__inner
+      #loader

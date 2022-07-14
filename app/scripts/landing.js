@@ -173,6 +173,22 @@ const sectionAnimations = () => {
 		autoplay: true,
 		path: 'scripts/animations/system-anim.json',
 	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#present'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/PRESENT.json',
+	});
+
+	bodymovin.loadAnimation({
+		container: document.querySelector('#loader'),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'scripts/animations/loader-anim.json',
+	});
 };
 
 // Show more buttons
